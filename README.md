@@ -24,5 +24,5 @@ O objetivo do projeto é criar um website...
 | 👨‍💻 Everson Ferreira | [GitHub](https://github.com/EversonF)  <br> [LinkedIn](https://www.linkedin.com/in/everson-araujo-ferreira-637185206/) |
 | 👩‍💻 Raylany Shimizu de Macêdo | [GitHub](https://github.com/Raylany-Shimizu)  <br> [LinkedIn](http://www.linkedin.com/in/raylany-shimizu-871b00201) |
 | 👩‍💻 Lara Vitória da Costa Bezerra | [GitHub](https://github.com/larav1)  <br> [LinkedIn](https://www.linkedin.com/in/laravitoria1) |
-| 👨‍💻 Andréia | [GitHub](https://github.com/Andreia-Zefirino/Andreia-Zeferino---proz-projeto-integrado)  <br> [LinkedIn](http://www.linkedin.com/in/andreiazeferino) |
+| 👨‍💻 Andréia | [GitHub](https://github.com/Andreia-Zefirino)  <br> [LinkedIn](http://www.linkedin.com/in/andreiazeferino) |
 </div>
