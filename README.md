@@ -21,7 +21,7 @@ O objetivo do projeto é criar um website...
 | Integrante | Contato | 
 |------------|---------|
 | 👨‍💻 José Lucas Pereira de Andrade | [GitHub](https://github.com/Jose1Lucas)  <br> [LinkedIn](https://www.linkedin.com/in/jos%C3%A9-lucas-b823b8283/) |
-| 👨‍💻 Everson Ferreira | [GitHub]()  <br> [LinkedIn]() |
+| 👨‍💻 Everson Ferreira | [GitHub](https://github.com/EversonF)  <br> [LinkedIn](https://www.linkedin.com/in/everson-araujo-ferreira-637185206/) |
 | 👩‍💻 Raylany Shimizu de Macêdo | [GitHub](https://github.com/Raylany-Shimizu)  <br> [LinkedIn](http://www.linkedin.com/in/raylany-shimizu-871b00201) |
 | 👩‍💻 Lara Vitória da Costa Bezerra | [GitHub](https://github.com/larav1)  <br> [LinkedIn](https://www.linkedin.com/in/laravitoria1) |
 | 👨‍💻 Andréia | [GitHub]()  <br> [LinkedIn]() |
