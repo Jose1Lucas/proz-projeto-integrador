@@ -4,7 +4,7 @@
 
 <div align="center">
   <h1>
-    <a href="https://github.com/Jose1Lucas/project-03">Projeto... </a>
+    <a href="https://github.com/Jose1Lucas/proz-projeto-integrador">Proz: Projeto integrador </a>
   </h1>
 </div>
 
