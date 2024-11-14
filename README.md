@@ -12,7 +12,13 @@
   <h2>📋 Sobre o Projeto</h2>
 </div>
 <p align="justify">
-O objetivo do projeto é criar um website que tenha informações sobre fatos históricos, cultura e mitologia da Grécia e Roma.
+Bem-vindo ao fascinante mundo da Grécia e Roma Antiga!
+
+Prepare-se para uma viagem pelo tempo em que os deuses eram temperamentais, os filósofos debatiam até o último fio de toga, e os heróis... bem, os heróis passavam boa parte do tempo resolvendo problemas que eles próprios causaram. Neste website, desvendaremos as histórias que moldaram a cultura ocidental – desde as façanhas de Hércules e as guerras quase intermináveis de Tróia até as festas romanas que acabavam em debates sobre ética (ou em um banquete completo no estilo "come-se até cair").
+
+Aqui, a história não é só uma sequência de datas ou batalhas épicas; é uma coleção de intrigas e mitos que se desenrolaram entre templos e tavernas, com direito a todos os exageros que os antigos cronistas puderam imaginar. Aprenda como uma disputa sobre uma maçã desencadeou uma guerra épica, ou como um certo imperador romano decidiu que o melhor meio de impressionar o povo era nomear seu cavalo como senador (sim, isso realmente aconteceu!).
+
+Então, entre sem cerimônia e fique à vontade – afinal, nossos anfitriões, como Zeus e Júpiter, já estão acostumados a uma boa dose de atenção (e talvez até esperem um sacrifício ou dois, mas a gente não precisa entrar nesse detalhe...).
 </p>
 
 <div align="center">
