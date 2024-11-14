@@ -12,7 +12,7 @@
   <h2>📋 Sobre o Projeto</h2>
 </div>
 <p align="justify">
-O objetivo do projeto é criar um website que tenha informações sobre fatos históricos, cultura e mitologia dos povos da mesopotâmia.
+O objetivo do projeto é criar um website que tenha informações sobre fatos históricos, cultura e mitologia da Grécia e Roma.
 </p>
 
 <div align="center">
