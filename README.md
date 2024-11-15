@@ -12,7 +12,7 @@
   <h2>📋 Sobre o Projeto</h2>
 </div>
 <p align="justify">
-Bem-vindo ao fascinante mundo da Grécia e Roma Antiga! Em nosso site História e Cultura do mediterrâneo...
+Bem-vindo ao fascinante mundo da Grécia e Roma Antiga! <br> Em nosso site História e Cultura do mediterrâneo...
 
 Prepare-se para uma viagem pelo tempo em que os deuses eram temperamentais, os filósofos debatiam até o último fio de toga, e os heróis... bem, os heróis passavam boa parte do tempo resolvendo problemas que eles próprios causaram. Neste website, desvendaremos as histórias que moldaram a cultura ocidental – desde as façanhas de Hércules e as guerras quase intermináveis de Tróia até as festas romanas que acabavam em debates sobre ética (ou em um banquete completo no estilo "come-se até cair").
 
