@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História e Cultura do Mediterrâneo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho com menu -->
+    <header>
+        <h1>História e Cultura do Mediterrâneo</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#artigos">Artigos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#fontes">Fontes</a></li>
+                <li><a href="#contato">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Categorias</h2>
+
+    <!-- Navegação -->
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="navigatePage(-1)">&#8592; Anterior</button>
+        <button class="nav-btn" id="nextBtn" onclick="navigatePage(1)">Próximo &#8594;</button>
+    </div>
+
+    <!-- Páginas de conteúdo -->
+    <div class="content-container">
+
+        <!-- Página 1: Esculturas -->
+        <div id="page-1" class="page">
+            <img src="img/escultura.jpg" alt="Esculturas do Mediterrâneo" style="width: 100%; max-width: 600px;">
+            <p>Esculturas do Mediterrâneo: representações artísticas detalhadas em pedra, mármore e bronze.</p>
+            <div class="current-page-indicator">Página atual: 1</div>
+        </div>
+
+        <!-- Página 2: Arquitetura -->
+        <div id="page-2" class="page" style="display:none;">
+            <img src="img/arquitetura.jpg" alt="Arquitetura Mediterrânea" style="width: 100%; max-width: 600px;">
+            <p>Arquitetura do Mediterrâneo: templos, colunas e estruturas clássicas.</p>
+            <div class="current-page-indicator">Página atual: 2</div>
+        </div>
+
+        <!-- Página 3: Outros (Utensílios e Roupas) -->
+        <div id="page-3" class="page" style="display:none;">
+            <img src="img/outros.jpg" alt="Utensílios e Roupas Mediterrâneas" style="width: 100%; max-width: 600px;">
+            <p>Utensílios e roupas do Mediterrâneo: objetos de uso cotidiano e vestimentas históricas.</p>
+            <div class="current-page-indicator">Página atual: 3</div>
+        </div>
+
+        <!-- Página 4: Pinturas -->
+        <div id="page-4" class="page" style="display:none;">
+            <img src="img/outros.jpg" alt="Pinturas do Mediterrâneo" style="width: 100%; max-width: 600px;">
+            <p>Pinturas do Mediterrâneo: Representações artísticas que expressam as fases históricas e a harmonia das proporções clássicas em tela.</p>
+            <div class="current-page-indicator">Página atual: 4</div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; Todos os direitos reservados ao grupo 3 - Everson, Andréia, José Lucas, Lara Vitória, Raylany</p>
+    </footer>
+
+    <script src="scripts/salao-de-artes.js"></script>
+
+</body>
+
+</html>
