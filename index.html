@@ -46,15 +46,23 @@
             background-color: #4caf50;
             color: white;
         }
-        .content {
+        /*.content {
             flex: 1;
-            padding: 50px;
+            padding: 30px;
             text-align: left;
-        }
+            justify-content: space-around;
+            
+        }*/
         .curiosidades {
             flex: 1;
             padding: 10px;
             text-align: right;
+        }
+        .columm{
+            display:flex;
+            justify-content: space-around;
+            padding: 20px;
+
         }
         footer {
             background-color: #333;
@@ -88,21 +96,23 @@
         <img src="img/Banner.png" alt="banner">
     </div>
 
-    <div class="content">
-        <h4>Você Sabia?</h4>
-        <img src="img/escola_atenas.jpg" width="200px" height="100px">
-        <p>O berço da democracia: A Grécia Antiga, especialmente Atenas, <br>é considerada o berço da democracia. No século V a.C., <br> cidadãos atenienses tinham o direito de votar e participar ativamente <br> nas decisões políticas da cidade, algo que era revolucionário na época.</p>
-    </div>
-
-    <div class="curiosidades">
-        <h4>Curiosidades</h4>
-        <p>A filosofia grega: Filósofos como Sócrates, Platão e Aristóteles são conhecidos por 
-        <br>suas contribuições à filosofia ocidental. Sócrates introduziu a 
-        <br>"maiêutica" (método de questionamento para chegar à verdade), 
-        <br>Platão fundou a Academia, e Aristóteles estabeleceu as bases da lógica e da 
-        <br>ciência.Uma das figuras mais iconinas da era de ouro da Gréciaera Socrates, 
-        <br>que está sendo retrado na pintura ao ladotomando o calice com cicuta.</p>
-    </div>
+    <main class="columm">
+        <div class="content">
+            <h4>Você Sabia?</h4>
+            <img src="img/escola_atenas.jpg" width="200px" height="100px">
+            <p>O berço da democracia: A Grécia Antiga, especialmente Atenas, <br>é considerada o berço da democracia. No século V a.C., <br> cidadãos atenienses tinham o direito de votar e participar ativamente <br> nas decisões políticas da cidade, algo que era revolucionário na época.</p>
+        </div>
+    
+        <div class="curiosidades">
+            <h4>Curiosidades</h4>
+            <p>A filosofia grega: Filósofos como Sócrates, Platão e Aristóteles são conhecidos por 
+            <br>suas contribuições à filosofia ocidental. Sócrates introduziu a 
+            <br>"maiêutica" (método de questionamento para chegar à verdade), 
+            <br>Platão fundou a Academia, e Aristóteles estabeleceu as bases da lógica e da 
+            <br>ciência.Uma das figuras mais iconinas da era de ouro da Gréciaera Socrates, 
+            <br>que está sendo retrado na pintura ao ladotomando o calice com cicuta.</p>
+        </div>
+    </main>
     
     <footer>
         <p>&copy; 2024 Pojeto Intregador. Grupo 3: Everson, Andréia, José Lucas, Lara Vitoria, Raylany </p>
