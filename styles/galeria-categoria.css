@@ -1,0 +1,22 @@
+/* Um estilo para os titulos e outro para os textos longos*/
+
+/* Fonte para os títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;  /* Fonte para os títulos */
+    font-weight: 900; /* Peso mais grosso para títulos */
+    color: #2C3E50; /* Cor mais forte para os títulos */
+}
+
+/* Fonte para textos longos */
+body, p, li, blockquote {
+    font-family: 'Merriweather', serif;  /* Fonte para textos longos */
+    font-weight: 450;  /* Peso normal para parágrafos */
+    line-height: 1.6;  /* Aumento do espaçamento entre linhas */
+    color: #444;  /* Cor mais suave para o texto */
+    background-color: #f9f9f9;  /* Cor de fundo mais suave */
+}
+
+/* Fonte alternativa para textos, caso o Merriweather não carregue */
+body, p, li, blockquote {
+    font-family: 'Playfair Display', serif;
+}
