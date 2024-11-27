@@ -45,9 +45,110 @@ body {
     text-decoration: none;
 }
 #conheca-nos h2 {
+    padding-top: 50px;
     color: #A34A28;
 }
 
 #formulario h2 {
     color: #A34A28;
 }
+
+#formulario {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    margin: 0 auto; 
+    padding: 20px;
+    padding-top: 50px;
+}
+
+#contato h2 {
+    padding-top: 100px;
+    color: #A34A28;
+}
+
+li {
+    list-style-type: none;
+  }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000; 
+    font-size: 16px; 
+    margin-left: 8px; 
+}
+
+ul li i {
+    font-size: 50px; 
+    color: #555; 
+}
+
+label {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+    background-color: #f9f9f9;
+}
+
+form {
+    width: 1000px; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 20px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%; 
+    padding: 10px;
+    background-color: #A34A28; 
+    color: white; 
+    font-size: 16px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+form button:hover {
+    background-color: #6B4226;
+}
+
+footer {
+    color: white;
+    background-color: #6B4226;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
