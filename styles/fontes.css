@@ -67,10 +67,10 @@
   /* Imagem nos cards */
   .content img {
     width: 100%;
-    height: 150px; /* Tamanho fixo da imagem */
+    height: 150px; 
     object-fit: cover;
     border-radius: 8px;
-    margin-top: 10px; /* Adicionando um pequeno espaçamento acima da imagem */
+    margin-top: 10px; 
   }
   
   /* Media query para telas menores */
