@@ -1,9 +1,96 @@
-footer {
-    color: white;
-    background-color: #6B4226;
-    text-align: center;
-    padding: 10px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Linha do tempo horizontal */
+  .timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    overflow-x: auto;
+    max-width: 100%;
     position: relative;
-    bottom: 0;
+  }
+  
+  /* Linha central conectando os elementos */
+  .timeline::before {
+    content: '';
+    position: absolute;
     width: 100%;
-}
+    height: 3px;
+    background-color: #FF9F55;
+    top: 50%;
+    z-index: 1;
+  }
+  
+  /* Cada container da linha do tempo */
+  .container {
+    position: relative;
+    width: 250px;
+    text-align: center;
+    margin: 0 15px;
+    z-index: 2;
+  }
+  
+  /* Estilo das caixas de conteúdo */
+  .content {
+    position: relative;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    z-index: 2;
+  }
+  
+  /* Título dentro da linha do tempo */
+  .content h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Imagem nos cards */
+  .content img {
+    width: 100%;
+    height: 150px; /* Tamanho fixo da imagem */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px; /* Adicionando um pequeno espaçamento acima da imagem */
+  }
+  
+  /* Media query para telas menores */
+  @media screen and (max-width: 768px) {
+    .timeline {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .container::before {
+      display: none;
+    }
+  
+    .container::after {
+      top: 0;
+      margin-left: 0;
+    }
+  
+    .timeline::before {
+      display: none;
+    }
+  }
+  
