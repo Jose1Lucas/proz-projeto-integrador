@@ -1,22 +1,156 @@
-/* Um estilo para os titulos e outro para os textos longos*/
+html, body {
+    height: 100%; /* Garante que a altura total seja 100% */
+    margin: 0; /* Remove as margens padrão */
+    display: flex; /* Flexbox para estruturar */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    overflow-x: hidden;
+  }
 
-/* Fonte para os títulos */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel', serif;  /* Fonte para os títulos */
-    font-weight: 900; /* Peso mais grosso para títulos */
-    color: #2C3E50; /* Cor mais forte para os títulos */
+body {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4eae6 !important;
 }
 
-/* Fonte para textos longos */
-body, p, li, blockquote {
-    font-family: 'Merriweather', serif;  /* Fonte para textos longos */
-    font-weight: 450;  /* Peso normal para parágrafos */
-    line-height: 1.6;  /* Aumento do espaçamento entre linhas */
-    color: #444;  /* Cor mais suave para o texto */
-    background-color: #f9f9f9;  /* Cor de fundo mais suave */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
+  width: 100%;
+  z-index: 1000;
 }
 
-/* Fonte alternativa para textos, caso o Merriweather não carregue */
-body, p, li, blockquote {
-    font-family: 'Playfair Display', serif;
+.navbar img {
+  height: 40px;
+  margin-right: 20px;
+  padding-left: 10px;
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #a34a28;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar a {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  flex: 1;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+  border-color: #fff;
+}
+
+.navegacao-galeria {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+#titulo-conteudo {
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 45px;
+}
+
+#titulo-conteudo h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #a34a28;
+  margin: 0;
+}
+
+.separador {
+    flex-shrink: 0;
+  width: 100%;
+  height: 20px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 10"%3E%3Cpath d="M0,0 C5,10 10,0 15,10 C20,0 25,10 30,0" fill="transparent" stroke="%23A34A28" stroke-width="2"/%3E%3C/svg%3E')
+    repeat-x;
+  background-size: 30px 10px;
+}
+
+.container-de-conteudo {
+  margin-top: 25px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 5px;
+}
+
+.pagina {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.pagina:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pagina img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.pagina p {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+  
+  footer {
+    background: #a34a28;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
