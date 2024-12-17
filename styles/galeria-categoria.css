@@ -3,6 +3,7 @@ html, body {
     margin: 0; /* Remove as margens padrão */
     display: flex; /* Flexbox para estruturar */
     flex-direction: column; /* Organiza os elementos verticalmente */
+    overflow-x: hidden;
   }
 
 body {
