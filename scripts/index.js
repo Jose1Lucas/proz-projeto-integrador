@@ -59,3 +59,14 @@ class Section extends HTMLElement {
 
 // Registra o custom element
 customElements.define("custom-section", Section);
+
+// Menu hamburguer funcional
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector(".menu-icon");
+  const navbar = document.querySelector(".navbar");
+
+  menuIcon.addEventListener("click", () => {
+    navbar.classList.toggle("active"); // Alterna a classe "active"
+  });
+});
