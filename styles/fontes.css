@@ -150,6 +150,18 @@ h1 {
   vertical-align: middle; /* Alinha verticalmente a imagem */
 }
 
+footer {
+  background: #6B4226;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 
 
 /* Media query para telas menores */
