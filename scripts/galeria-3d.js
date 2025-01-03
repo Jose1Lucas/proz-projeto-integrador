@@ -1,45 +1,54 @@
-let currentPage = 1;
-const totalPages = 10;
+ // Página indicador da página inicial
+let numIndicador = 1;
 
-function showPage(pageNumber) {
-    const pages = document.querySelectorAll('.pagina');
-    pages.forEach(page => (page.style.display = 'none')); // Esconde todas as páginas
+// Captura dos botões de navegação
+const botaoAvancar = document.querySelector("#avancar");
+const botaoRetroceder = document.querySelector("#retroceder");
 
-    const pageToShow = document.getElementById(`pagina-${pageNumber}`); // Corrigido o ID para `pagina-`
-    if (pageToShow) {
-        pageToShow.style.display = 'block'; // Mostra a página selecionada
+// Captura das páginas e dos indicadores
+const paginas = document.querySelectorAll(".pagina");
+const indicadorPaginaAtual = document.querySelectorAll(".num-pagina");
+
+// Função para atualizar a exibição das páginas
+function atualizarPaginas() {
+  paginas.forEach((pagina, index) => {
+    // Exibe a página correspondente e oculta as outras
+    if (index + 1 === numIndicador) {
+      pagina.style.display = "block";
+    } else {
+      pagina.style.display = "none";
     }
+  });
 
-    // Atualiza o indicador de página atual
-    const indicator = document.querySelector(`#pagina-${pageNumber} .indicador-da-pagina`);
-    if (indicator) {
-        const pagesLeft = totalPages - pageNumber;
-        indicator.textContent = `Página atual: ${pageNumber} de ${totalPages}. Restantes: ${pagesLeft}.`;
-    }
-
-    localStorage.setItem('currentPage', pageNumber); // Salva a página atual
+  // Atualiza os indicadores com o número da página atual
+  indicadorPaginaAtual.forEach((element) => {
+    element.innerText = numIndicador;
+    element.style.display = "inline";
+  });
 }
 
-function navigatePage(direction) {
-    currentPage += direction;
-
-    // Garante que a página fique dentro do intervalo válido
-    if (currentPage < 1) {
-        currentPage = totalPages;
-    } else if (currentPage > totalPages) {
-        currentPage = 1;
-    }
-
-    showPage(currentPage);
+// Função para incrementar a página (botão "Próximo")
+function incrementarPagina() {
+  if (numIndicador < paginas.length) {
+    numIndicador++;
+    atualizarPaginas();
+  }
 }
 
-// Recupera a página salva no localStorage ao carregar
-document.addEventListener('DOMContentLoaded', () => {
-    currentPage = parseInt(localStorage.getItem('currentPage')) || 1; // Vai para a página 1 se não houver página salva
-    showPage(currentPage);
-});
-
-// Função para recarregar a página inteira
-function reloadPage() {
-    location.reload(); // Recarga a página inteira
+// Função para decrementar a página (botão "Anterior")
+function decrementarPagina() {
+  if (numIndicador > 1) {
+    numIndicador--;
+    atualizarPaginas();
+  }
 }
+
+// Adiciona eventos aos botões
+botaoAvancar.addEventListener("click", incrementarPagina);
+botaoRetroceder.addEventListener("click", decrementarPagina);
+
+// Inicializa a exibição
+atualizarPaginas();
+
+// Recarrega a página quando o botão de avançar ou retroceder for clicado
+

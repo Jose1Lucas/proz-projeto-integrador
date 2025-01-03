@@ -64,7 +64,7 @@ body {
 }
 
 #contato h2 {
-    padding-top: 100px;
+    padding-top: 150px;
     color: #A34A28;
 }
 
@@ -152,3 +152,75 @@ footer {
     width: 100%;
 }
 
+#conheca-nos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+#conheca-nos li {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 10px; 
+}
+
+#conheca-nos img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 2px solid #6B4226; 
+}
+
+#conheca-nos div {
+    display: flex;
+    flex-direction: column;
+}
+
+#conheca-nos p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.container-secoes {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 30px;
+    padding: 20px;
+}
+
+.container-secoes section {
+    flex: 1; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#conheca-nos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#conheca-nos li {
+    display: flex; 
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+#conheca-nos img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #6B4226;
+}
