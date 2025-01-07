@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bacasime+Antique&family=Forum&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Martian+Mono:wght@100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bacasime+Antique&family=Forum&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Martian+Mono:wght@100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap");
 
 * {
   font-family: "Noto Sans", serif;
@@ -6,20 +6,19 @@
   margin: 0;
   padding: 0;
 }
-  
+
 body {
   background-color: #f4eae6;
   color: #242424;
 }
 
 mark {
-  background-color: #F4EAE6;
-
+  background-color: #f4eae6;
 }
 
 .banner {
   width: 100%;
-  height: auto; 
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,27 +29,16 @@ mark {
 
 .banner img {
   width: 100%;
-  height: auto; 
+  height: auto;
 }
 
 .navbar {
-  background-color: #6B4226;
+  background-color: #6b4226;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 10px 20px;
   margin-bottom: 0;
-}
-  
-/* Linha do tempo horizontal */
-.timeline {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  overflow-x: auto;
-  max-width: 100%;
-  position: relative;
 }
 
 .navbar img {
@@ -68,42 +56,59 @@ mark {
   align-items: center;
 }
 
+/* Linha do tempo horizontal */
 .timeline {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  justify-content: flex-start;
   padding: 50px 0;
   overflow-x: auto;
   max-width: 100%;
+  gap: 20px;
   position: relative;
+  align-items: center;
+  flex-direction: row;
 }
-  
+
 /* Linha central conectando os elementos */
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
+  left: 0;
   height: 3px;
-  background-color: #FFD900;
+  background-color: #ffd900;
   top: 50%;
   z-index: 1;
-
 }
-  
+
+.timeline-controls {
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+  justify-content: center;
+}
+
 /* Cada container da linha do tempo */
 .container {
   position: relative;
-  width: 250px;
+  overflow-x: auto; /* Permite rolar horizontalmente */
+  scroll-behavior: smooth;
+  min-width: 250px;
+  max-width: 300px;
   text-align: center;
   margin: 0 15px;
   z-index: 2;
+  border-top: 2px solid #aba8a8;
+  flex-shrink: 0;
+  scroll-behavior: smooth;
 }
-  
+
 /* Estilo das caixas de conteúdo */
 .content {
   position: relative;
   background-color: #fff;
-  height: 570px;
+  height: 546px;
   padding: 15px 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -115,38 +120,51 @@ mark {
 }
 
 h1 {
-  margin: 3px; /* Remove margens extras do título */
-  color: #A34A28;
+  margin: 3px;
+  color: #a34a28;
 }
-  
+
 /* Título dentro da linha do tempo */
 .content h2 {
   color: #333;
   font-size: 18px;
   margin-bottom: 10px;
 }
-  
+
 .content p {
   font-size: 14px;
   color: #3f3d3d;
 }
-  
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #b2abab;
+  color: black;
+}
+
 /* Imagem nos cards */
 .content img {
-  width: 100%; 
+  width: 100%;
   max-width: 210px;
   height: 100px;
   object-fit: contain;
-  margin-top: 18px; 
+  margin-top: 18px;
   margin-bottom: 18px;
 }
 
-.mapa-container, .referencia, .tempo {
+.mapa-container,
+.referencia,
+.tempo {
   display: flex;
   align-items: center; /* Alinha a imagem e o título verticalmente */
-  gap: 10px; /* Espaçamento entre a imagem e o título */
+  gap: 10px;
   margin: 12px;
-  border-bottom: 4px solid #6B4226;
+  border-bottom: 4px solid #6b4226;
 }
 
 .item img {
@@ -154,37 +172,34 @@ h1 {
 }
 
 footer {
-  background: #6B4226;
+  background: #6b4226;
   color: #fff;
   text-align: center;
   padding: 15px;
-  margin-top: auto; 
+  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-
-
-/* Media query para telas menores - ajustar depois*/
+/* Media query para telas menores */
 @media screen and (max-width: 768px) {
   .timeline {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .container::before {
     display: none;
   }
-  
+
   .container::after {
     top: 0;
     margin-left: 0;
   }
-  
+
   .timeline::before {
     display: none;
   }
 }
-  
