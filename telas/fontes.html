@@ -3,8 +3,10 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="../styles/fontes.css">
-  <script src="../scripts/fontes.js"></script>
+  <link rel="stylesheet" href="fontes.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="fontes.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 </head>
 <body>
@@ -21,23 +23,24 @@
         <div class="banner">
             <img src="../img/Banner-maior.png" alt="banner">
         </div>
+        
     </header>
 
+    <body>
     <div class="tempo">
         <div class="item">
             <img src="../img/ampulheta.png" alt="Grinalda" width="40">
         </div>
         <h1>Linha do tempo</h1>
     </div>
-
-
+    
     <div class="timeline">
         <div class="container">
             <div class="content">
                 <h2>3500 a.C.</h2>
                 <h4>Idade da Pedra:</h4>
                 <p>A <mark><strong>Revolução Neolítica</strong></mark> nas civilizações do Oriente Próximo, especialmente na Mesopotâmia, marcou o início da agricultura, da irrigação, da <mark>formação de vilas e cidades</mark>, da construção de templos, do surgimento da escrita e da intensificação da hierarquia social, transformando sociedades humanas em complexas <mark>estruturas organizadas</mark>.</p>
-                <img src="../img/idade-da-pedra.png" alt="Período neolítico">
+                <img src="../img/idade-da-pedra.png" alt="Período Neolítico">
             </div>
         </div>
         <div class="container">
@@ -45,15 +48,16 @@
                 <h2>3500 - 1100 a.C.</h2>
                 <h4>Idade do Bronze:</h4>
                 <p>A <mark><strong>civilização minoica</strong></mark> floresceu em Creta por volta de 2000 a.C., usando o silabário Linear A. Entre <mark><strong>1700 e 1100 a.C.</strong></mark>, a civilização micênica dominou a <mark>Grécia continental</mark>, conquistou Creta em 1450 a.C. e adotou o Linear B. Por volta de <mark><strong>1200 a.C.</strong></mark>, os dórios invadiram a Grécia, destruindo os <mark>micênicos</mark>.</p>
-                <img src="https://via.placeholder.com/250x150" alt="Imagem 2">
+                <img src="https://via.placeholder.com/250x150" alt="Idade do Bronze">
             </div>
         </div>
         <div class="container">
             <div class="content">
                 <h2>1100 - 750 a.C.</h2>
                 <h4>Idade do Ferro:</h4>
-                <p>Entre 1100 e 750 a.C., na <mark><strong>Idade do Ferro</strong></mark> grega, destacaram-se a ausência de escrita, os estilos cerâmicos protogeométrico (1100-875 a.C.) e geométrico (875-750 a.C.), a transição de <mark>monarquias para oligarquias</mark>, o surgimento das pólis, o destaque cultural de Atenas e o "renascimento do século VIII". Em <mark><strong>776 a.C.</strong></mark>, ocorreram os primeiros <mark>Jogos Olímpicos</mark>.</p>
-                <img src="https://via.placeholder.com/250x150" alt="Imagem 3">
+                <p>Entre 1100 e 750 a.C., na <mark><strong>Idade do Ferro</strong></mark> grega, destacaram-se a ausência de escrita, os estilos cerâmicos protogeométrico (1100-875 a.C.) e geométrico (875-750 a.C.), a transição de <mark>monarquias para oligarquias</mark>, o surgimento das pólis, o destaque cultural de Atenas e o "renascimento do século VIII". Em <mark><strong>776 a.C.</strong></mark>, ocorreram os primeiros <mark>Jogos Olímpicos</mark>.
+                </p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
             </div>
         </div>
         <div class="container">
@@ -69,7 +73,7 @@
                 <h2>480 - 323 a.C.</h2>
                 <h4>Período Clássico - Parte 1:</h4>
                 <p>Entre <mark><strong>480 e 323 a.C.</strong></mark>, no Período Clássico, a Grécia viveu grandes eventos, como as <mark>Guerras Persas</mark> (492-479) e a <mark>Guerra do Peloponeso</mark> (431-404). Destacaram-se Péricles em Atenas (461-429), reformas democráticas, os Grandes Sofistas, como Protágoras e Górgias, e a atuação de Sócrates (469-399). O drama floresceu com Ésquilo, Sófocles e Eurípides.</p>
-                <img src="https://via.placeholder.com/250x150" alt="Imagem 5">
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
             </div>
         </div>
         <div class="container">
@@ -77,16 +81,93 @@
                 <h2>480 - 323 a.C.</h2>
                 <h4>Período Clássico - Parte 2:</h4>
                 <p>No <mark><strong>Século IV a.C. (399-323)</strong></mark>, a cultura e a retórica se expandiram. Isócrates abriu sua escola em 392, <mark>Platão fundou a Academia em 380</mark> e Aristóteles, que chegou à Academia em 367, mais tarde criou o <mark>Liceu</mark>. Nesse período, destacaram-se Demóstenes, a ascensão de Filipe da Macedônia como líder na Grécia, e, em 323, ocorreu a morte de <mark>Alexandre, o Grande</mark>.</p>
-                <img src="https://via.placeholder.com/250x150" alt="Imagem 6">
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
             </div>
         </div>
+        <div class="container">
+            <div class="content">
+                <h2>323 - 30 a.C.</h2>
+                <h4>Período Helenístico - Parte 1:</h4>
+                <p>O período <mark><strong>Helenístico</strong></mark> (323-30 a.C.) foi marcado pela disputa de poder entre os generais de Alexandre, resultando em <mark>três dinastias principais</mark>: os Ptolomeus (Egito e Síria), os Selêucidas (Ásia Menor e Pérsia) e os Antigônidas (Macedônia e Grécia). Em 241 a.C., a dinastia atálida surgiu com Pérgamo como capital. Confederações gregas apareceram por volta de <mark><strong>250 a.C.</strong></mark>, promovendo certa <mark>autonomia local</mark>.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>323 - 30 a.C.</h2>
+                <h4>Período Helenístico - Parte 2:</h4>
+                <p>A cultura grega se espalhou amplamente, consolidando a língua, a retórica como ferramenta educacional e o crescimento de <mark>cidades cosmopolitas</mark>, como Alexandria e Antioquia. Roma começou a influenciar a região em <mark><strong>215 a.C.</strong></mark>, tornou a Grécia uma <mark>província</mark> em 146 a.C. e conquistou o Egito em 30 a.C., encerrando o período.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>753 - 30 a.C.</h2>
+                <h4>Roma - ascensão da república:</h4>
+                <p>A história da Roma antiga divide-se em três períodos principais: <mark><strong>monarquia, república e império</strong></mark>. Segundo a lenda, Roma foi fundada em <mark><strong>753 a.C.</strong></mark> por <mark>Rômulo</mark>, um descendente de Enéias. Durante a monarquia, Roma foi governada por sete reis, alguns de origem etrusca, eleitos pelo povo e aconselhados pelo senado de anciãos. A sociedade era organizada em três tribos baseadas em parentesco e, posteriormente, em classes sociais definidas por riqueza.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>510 - 30 a.C.</h2>
+                <h4>República:</h4>
+                <p>A república começou como um regime <mark>aristocrático</mark>, com dois cônsules eleitos anualmente e um senado composto por ex-magistrados. No início, os plebeus enfrentaram desigualdades sociais e políticas em relação aos patrícios, culminando no <mark><strong>"conflito das ordens"</strong></mark>, que resultou em uma oligarquia mista e na conquista da soberania do concilium plebis (287 a.C.). A república expandiu sua influência com a conquista da península italiana e enfrentou <mark>desafios</mark>, como a <mark><strong>destruição quase total de Roma pelos gauleses (390 a.C.) e guerras no sul da Itália (280 a.C.)</strong></mark>.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>270 - 120 a.C.</h2>
+                <h4>República média:</h4>
+                <p>Roma consolidou a paz na Itália e expandiu seus domínios fora da península, conquistando territórios como Sicília, Gália Cisalpina, Macedônia, Grécia e Espanha. O contato com a <mark><strong>cultura grega</strong></mark> influenciou a <mark>arte, arquitetura e literatura romanas</mark>. Esse período viu a ascensão da classe equestre e o aumento da riqueza.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>120 - 30 a.C.</h2>
+                <h4>República tardia:</h4>
+                <p>Na república tardia, conflitos entre optimates (conservadores) e populares (reformistas) levaram a <mark>guerras civis</mark>. Os irmãos Graco iniciaram reformas populistas, seguidos por Mário, Sula, Pompeu e Júlio César. O <mark><strong>primeiro triunvirato</strong></mark> (César, Pompeu e Crasso) desmoronou, resultando na ascensão de César como ditador e sua morte em 44 a.C. Após novas guerras civis, o <mark><strong>segundo triunvirato</strong></mark> (Otaviano, Antônio e Lépido) derrotou os republicanos, e Otaviano tornou-se o imperador Augusto em <mark><strong>30 a.C.</strong></mark>, encerrando a república e <mark>iniciando o império</mark>.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>30 a.C. - 410 d.C.</h2>
+                <h4>Roma - O Império Parte 1:</h4>
+                <p>O Império Romano começou com a <mark><strong>Era Augusta (30 a.C. - 14 d.C.)</strong></mark>, marcada pela estabilidade e pela <mark>produção literária</mark> de autores como Virgílio, Horácio, Ovídio e Lívio. Entre 14 e 68 d.C., os imperadores Júlio-Claudianos (Tibério, Calígula, Cláudio e Nero) governaram, período que viu o florescimento de autores como Lucano, Sêneca e Petrônio. O ano de 69 d.C. foi marcado pela instabilidade, com o "ano dos quatro imperadores" (Galba, Otão, Vitélio e Vespasiano). Os Flavianos (70 - 96 d.C.) trouxeram relativa estabilidade, enquanto autores como Plínio, o Ancião, Marcial e Quintiliano se destacaram.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>30 a.C. - 410 d.C.</h2>
+                <h4>Roma - O Império Parte 2:</h4>
+                <p>Sob Trajano (98 - 117 d.C.), o império atingiu seu auge, com produções de Tácito, Juvenal e Plínio, o Jovem. Adriano (117 - 138 d.C.) consolidou as fronteiras, e os Antoninos (138 - 192 d.C.), incluindo Marco Aurélio, <mark>governaram com prosperidade</mark>. A <mark><strong>dinastia dos Severos (193 - 235 d.C.)</strong></mark> precedeu o período de instabilidade dos Imperadores Soldados (235 - 305 d.C.), <mark>encerrado</mark> com as reformas de <mark>Diocleciano</mark>.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>30 a.C. - 410 d.C.</h2>
+                <h4>Roma - O Império Parte 3:</h4>
+                <p>Em 313 d.C., Constantino emitiu o Édito de Milão, garantindo liberdade religiosa aos cristãos, e transferiu a capital do império para <mark>Bizâncio (Constantinopla)</mark> em 330 d.C. Em <mark><strong>395 d.C.</strong></mark>, o império foi dividido entre <mark>Oriente e Ocidente</mark>. Roma foi saqueada pelos gauleses em 410 d.C., e o reinado de Justiniano (527 - 565 d.C.) marcou o início da era bizantina, o último período em que o latim foi amplamente usado no Oriente.</p>
+                <img src="https://via.placeholder.com/250x150" alt="Imagem">
+            </div>
+        </div>
+        
+
     </div>
 
     <div class="mapa-container">
         <div class="item">
           <img src="../img/mapa.png" alt="Mapa" width="40">
         </div>
-        <h1>Mapa</h1>
+        <h1>Mapa do Mediterrâneo</h1>
+        <div id="map">
+            
+        </div>
     </div>
     
     <div class="referencia">
@@ -95,11 +176,12 @@
         </div>
         <h1>Referências</h1>
     </div>
+
+    <!-- MUDANÇA - Rodapé -->
     <footer>
         <p>&copy; Todos os direitos reservados ao Grupo 3 - Everson, Andréia, José Lucas, Lara Vitória, Raylany</p>
     </footer>
+    
 
 </body>
-
-
 </html>
