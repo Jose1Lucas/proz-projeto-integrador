@@ -1,0 +1,197 @@
+/*Reset Basico*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Configurações Gerais*/
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4eae6;
+}
+.banner {
+    width: 100%;
+    height: auto; 
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+@media  screen and (max-width: 768px) {
+    .banner img{
+        height: 200px;
+    }
+    .navbar a {
+        padding: 10px;
+    }
+    footer {
+        padding: 10px;
+    }
+    
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f4eae6;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar img {
+    height: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(4, 4, 4);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #c1bfbd;
+    color: white;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar a {
+        display: none; /*Esconde os links */
+    }
+    .navbar img {
+        margin-right: auto; /*Centraliza o logo */
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .navbar.active a {
+        display: block; /* Mostra os links quando o menu está ativo */
+        text-align: left;
+        padding: 10px;
+        background-color: #f4eae6;
+        border-bottom: 1px solid #ccc;
+    }
+    
+}
+/* Estilo do artigo principal */
+#artigo {
+    text-align: center;
+    padding: 0rem;
+    border-radius: 8px;
+    margin: 1px auto;
+    max-width: 1000px;
+    
+}
+
+#artigo h1 {
+    font-size: 3rem;
+    color: #A34A28;
+    text-align: center;
+}
+
+/* Estilo das sections */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px auto;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    color: #A34A28;
+    text-align: center;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    align-items: center
+}
+
+section p {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+
+/* Estilo dos links "Saiba Mais" */
+section h6 {
+    text-align: left;
+    color: #004080;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section h6:hover {
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* Estilo do rodapé */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: #4caf50;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
