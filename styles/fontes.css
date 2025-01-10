@@ -153,8 +153,8 @@ a:hover {
   max-width: 210px;
   height: 100px;
   object-fit: contain;
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .mapa-container,
@@ -165,10 +165,122 @@ a:hover {
   gap: 10px;
   margin: 12px;
   border-bottom: 4px solid #6b4226;
+  margin-top: 30px;
 }
 
 .item img {
   vertical-align: middle; /* Alinha verticalmente a imagem */
+}
+
+#mapa {
+  display: inline-block;
+  border: 2px solid #5e503f;
+  margin-bottom: 20px;
+}
+
+.civilizacao-marker {
+  fill: #3a86ff;
+  cursor: pointer;
+}
+
+.mito-marker {
+  fill: #ff006e;
+  cursor: pointer;
+}
+
+/* Caixa de informações */
+#info-box {
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #5e503f;
+  background-color: #fff4d9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  text-align: left;
+}
+
+.str3 {
+  stroke: black;
+  stroke-width: 10;
+  stroke-opacity: 0.501961;
+}
+.str5 {
+  stroke: black;
+  stroke-width: 50;
+}
+.str2 {
+  stroke: #003399;
+  stroke-width: 20;
+}
+.str7 {
+  stroke: #434242;
+  stroke-width: 10;
+}
+.str0 {
+  stroke: black;
+  stroke-width: 10;
+}
+.str4 {
+  stroke: black;
+  stroke-width: 10;
+}
+.str1 {
+  stroke: #003399;
+  stroke-width: 10;
+}
+.str8 {
+  stroke: #2b2a29;
+  stroke-width: 7.62;
+}
+.str6 {
+  stroke: black;
+  stroke-width: 7.62;
+}
+.fil4 {
+  fill: none;
+}
+.fil3 {
+  fill: none;
+  fill-rule: nonzero;
+}
+.fil1 {
+  fill: #fefefe;
+}
+.fil11 {
+  fill: #d9dada;
+}
+.fil0 {
+  fill: #2b2a29;
+}
+.fil2 {
+  fill: #fefefe;
+  fill-rule: nonzero;
+}
+.fil9 {
+  fill: #d9dada;
+  fill-rule: nonzero;
+}
+.fil10 {
+  fill: #434242;
+  fill-rule: nonzero;
+}
+.fil6 {
+  fill: #2b2a29;
+  fill-rule: nonzero;
+}
+.fil8 {
+  fill: black;
+  fill-rule: nonzero;
+}
+.fil7 {
+  fill: #fefefe;
+  fill-rule: nonzero;
+  fill-opacity: 0.501961;
+}
+.fil5 {
+  fill: #fefefe;
+  fill-opacity: 0.701961;
 }
 
 footer {
