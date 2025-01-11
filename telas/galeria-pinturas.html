@@ -6,29 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria Pinturas</title>
 
+    <script src="../scripts/galeria-responsivo.js" defer></script>
     <script src="../scripts/galeria-3d.js" defer></script>
+    <link rel="stylesheet" href="../styles/galeria-3d.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Benne&family=Cinzel:wght@400..900&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- Cabeçalho com menu -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./artigo.html">Artigos</a></li>
-                <li><a href="./galeria-categorias.html">Galeria</a></li>
-                <li><a href="./fontes.html">Fontes</a></li>
-                <li><a href="./contato.html">Contatos</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <img src="../img/IMG-LOGO2.jpg" alt="Logo">
+        <div class="menu-icon">☰</div>
+        <div class="menu-content">
+            <!-- Este menu é o hambúrguer e só aparece no mobile -->
+            <a href="../index.html" class="active">Início</a>
+            <a href="./artigo.html">Artigos</a>
+            <a href="./galeria-categorias.html">Galeria</a>
+            <a href="./fontes.html">Fontes</a>
+            <a href="./contato.html">Contatos</a>
+        </div>
+        <!-- Estes links devem estar visíveis em telas maiores -->
+        <div class="navbar-links">
+            <a href="../index.html" class="active">Início</a>
+            <a href="./artigo.html">Artigos</a>
+            <a href="./galeria-categorias.html">Galeria</a>
+            <a href="./fontes.html">Fontes</a>
+            <a href="./contato.html">Contatos</a>
+        </div>
+    </nav>
 
-    <div class="banner">
-        <img src="../img/banner-hcdm.png" alt="banner">
+    <div id="titulo-conteudo">
+        <h1>PINTURA</h1>
     </div>
 
-    <h1>Pinturas</h1>
+    <div class="separador"></div>
 
     <!-- Navegação -->
     <nav class="navegacao-galeria">
@@ -42,8 +59,9 @@
         <!-- Página 1 -->
         <figure class="pagina">
             <div class="sketchfab-embed-wrapper">
-                <iframe title="" src="" allowfullscreen></iframe>
-                <p class="descricao">ui</p>
+                <img src="../img/pintura-1.png" alt="" style="width: 100%; max-width: 600px;">
+                <p class="descricao">Pintura de Pompeia que foi encontrada retratando cenas da mitologia grega
+                    <br>(Foto: Divulgação/ Cesare Abbate/ Pompeii Sites)</p>
                 <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
                     <p class="restante-paginas">Páginas restantes: 9</p>
                 </div>

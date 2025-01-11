@@ -6,32 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria Esculturas</title>
 
-    <link rel="stylesheet" href=".css">
-
+    <script src="../scripts/galeria-responsivo.js" defer></script>
     <script src="../scripts/galeria-3d.js" defer></script>
+    <link rel="stylesheet" href="../styles/galeria-3d.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Benne&family=Cinzel:wght@400..900&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
+<nav class="navbar">
+        <img src="../img/IMG-LOGO2.jpg" alt="Logo">
+        <div class="menu-icon">☰</div>
+        <div class="menu-content">
+            <!-- Este menu é o hambúrguer e só aparece no mobile -->
+            <a href="../index.html" class="active">Início</a>
+            <a href="./artigo.html">Artigos</a>
+            <a href="./galeria-categorias.html">Galeria</a>
+            <a href="./fontes.html">Fontes</a>
+            <a href="./contato.html">Contatos</a>
+        </div>
+        <!-- Estes links devem estar visíveis em telas maiores -->
+        <div class="navbar-links">
+            <a href="../index.html" class="active">Início</a>
+            <a href="./artigo.html">Artigos</a>
+            <a href="./galeria-categorias.html">Galeria</a>
+            <a href="./fontes.html">Fontes</a>
+            <a href="./contato.html">Contatos</a>
+        </div>
+    </nav>
 
-    <!-- Cabeçalho com menu -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./artigo.html">Artigos</a></li>
-                <li><a href="./galeria-categorias.html">Galeria</a></li>
-                <li><a href="./fontes.html">Fontes</a></li>
-                <li><a href="./contato.html">Contatos</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="banner">
-        <img src="../img/banner-hcdm.png" alt="banner">
+    <div id="titulo-conteudo">
+        <h1>ESCULTURA</h1>
     </div>
 
-    <h1>Esculturas</h1>
+    <div class="separador"></div>
 
     <!-- Navegação -->
     <nav class="navegacao-galeria">
@@ -73,9 +86,9 @@
                     src="https://sketchfab.com/models/a5f7d0f2934344e68a4e0734359d069e/embed" allowfullscreen></iframe>
                 <p>A escultura "O Gálata Moribundo" retrata um guerreiro celta moribundo, expressando dor e sacrifício.
                     Século II a.C.</p>
-                    <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
-                        <p class="restante-paginas">Páginas restantes: 7</p>
-                    </div>
+                <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
+                    <p class="restante-paginas">Páginas restantes: 7</p>
+                </div>
             </div>
         </figure>
 
@@ -86,9 +99,9 @@
                     src="https://sketchfab.com/models/ce342ec73c8c46a8ab916a87a8a3b9bf/embed" allowfullscreen></iframe>
                 <p>A escultura "Gálata Ludovisi matando a si mesmo e sua esposa" retrata um guerreiro celta
                     suicidando-se com sua esposa. Século II d.C.</p>
-                    <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
-                        <p class="restante-paginas">Páginas restantes: 6</p>
-                    </div>
+                <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
+                    <p class="restante-paginas">Páginas restantes: 6</p>
+                </div>
             </div>
         </figure>
 
@@ -99,9 +112,9 @@
                     src="https://sketchfab.com/models/ab1778163d8c46428cd1ced71ef5dfa7/embed" allowfullscreen></iframe>
                 <p>Leão atacando um cavalo, simbolizando realismo e ênfase na emoção e no movimento. Entre os séculos IV
                     a.C. e o século I a.C.</p>
-                    <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
-                        <p class="restante-paginas">Páginas restantes: 5</p>
-                    </div>
+                <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
+                    <p class="restante-paginas">Páginas restantes: 5</p>
+                </div>
             </div>
         </figure>
 
@@ -112,9 +125,9 @@
                     src="https://sketchfab.com/models/3308b26866a8423e81559041c97c68cd/embed" allowfullscreen></iframe>
                 <p>Escultura de Netuno domando um hipocampo, representando sua autoridade sobre o mar e suas criaturas.
                     Século I d.C.</p>
-                    <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
-                        <p class="restante-paginas">Páginas restantes: 4</p>
-                    </div>
+                <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
+                    <p class="restante-paginas">Páginas restantes: 4</p>
+                </div>
             </div>
         </figure>
 
@@ -125,9 +138,9 @@
                     src="https://sketchfab.com/models/a6002ac58f71477085bc73826111e86c/embed" allowfullscreen></iframe>
                 <p>Busto de Dionísio, o deus do vinho e da festa, com uma expressão jovial e característica do estilo
                     grego clássico. Século II a.C.</p>
-                    <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
-                        <p class="restante-paginas">Páginas restantes: 3</p>
-                    </div>
+                <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
+                    <p class="restante-paginas">Páginas restantes: 3</p>
+                </div>
             </div>
         </figure>
 
@@ -138,9 +151,9 @@
                     src="https://sketchfab.com/models/fa373fc1af7c4bcc96454cad2ce25b9f/embed" allowfullscreen></iframe>
                 <p>Escultura de um atleta no momento de arremesso de disco, exemplificando o ideal de movimento e
                     harmonia grega. Século V a.C.</p>
-                    <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
-                        <p class="restante-paginas">Páginas restantes: 2</p>
-                    </div>
+                <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
+                    <p class="restante-paginas">Páginas restantes: 2</p>
+                </div>
             </div>
         </figure>
 
@@ -151,9 +164,9 @@
                     src="https://sketchfab.com/models/3076da3924cd4ba19375845717bee31c/embed" allowfullscreen></iframe>
                 <p>Figura feminina em uma coluna, representando virtude e força, comum na arte romana clássica. Século I
                     d.C.</p>
-                    <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
-                        <p class="restante-paginas">Páginas restantes: 1</p>
-                    </div>
+                <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
+                    <p class="restante-paginas">Páginas restantes: 1</p>
+                </div>
             </div>
         </figure>
 
@@ -164,9 +177,9 @@
                     src="https://sketchfab.com/models/4a644dd9390547e0954596d4dd52072b/embed" allowfullscreen></iframe>
                 <p>Representação de Erato, musa da poesia lírica, com lira, simbolizando a arte da poesia e da música.
                     Século IV a.C.</p>
-                    <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
-                        <p class="restante-paginas">Páginas restantes: 0</p>
-                    </div>
+                <div class="indicador-da-pagina">Página atual: <p class="num-pagina"></p>
+                    <p class="restante-paginas">Páginas restantes: 0</p>
+                </div>
             </div>
         </figure>
 
