@@ -20,14 +20,16 @@
                 <a href="fontes.html">Fontes</a>
                 <a href="contato.html">Contatos</a>
             </div>
-            <div class="navbar-links">
-                <a href="../index.html" class="active">Início</a>
-                <a href="artigo.html">Artigos</a>
-                <a href="galeria-categorias.html">Galeria</a>
-                <a href="fontes.html">Fontes</a>
-                <a href="contato.html">Contatos</a>
-            </div>
+            <!-- Estes links devem estar visíveis em telas maiores -->
+        <div class="navbar-links">
+            <a href="index.html" class="active">Início</a>
+            <a href="telas/artigo.html">Artigos</a>
+            <a href="telas/galeria-categorias.html">Galeria</a>
+            <a href="telas/fontes.html">Fontes</a>
+            <a href="telas/contato.html">Contatos</a>
+        </div>
         </nav>
+        
         <div class="banner">
             <img src="../img/BANNER-TESTE(2).jpg" alt="banner">
         </div>
@@ -103,7 +105,6 @@
                 <h2>323 - 30 a.C.</h2>
                 <h4>Período Helenístico - Parte 1:</h4>
                 <p>O período <mark><strong>Helenístico</strong></mark> (323-30 a.C.) foi marcado pela disputa de poder entre os generais de Alexandre, resultando em <mark>três dinastias principais</mark>: os Ptolomeus (Egito e Síria), os Selêucidas (Ásia Menor e Pérsia) e os Antigônidas (Macedônia e Grécia). Em 241 a.C., a dinastia atálida surgiu com Pérgamo como capital. Confederações gregas apareceram por volta de <mark><strong>250 a.C.</strong></mark>, promovendo certa <mark>autonomia local</mark>.</p>
-                <img src="../img/Helenistico-p2.jpg" alt="Período helenístico">
                 <img src="../img/Helenistico-p1.jpg" alt="Período helenístico">
             </div>
         </div>
@@ -184,9 +185,8 @@
         <h1>Mapa do Mediterrâneo</h1>
         
     </div>
-    
-
-    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="297mm" height="210mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+    <div class="mapa">
+        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
     viewBox="0 0 29700 21000"
     xmlns:xlink="http://www.w3.org/1999/xlink">
        <g id="Plan_x0020_1">
@@ -731,6 +731,9 @@
         
     </svg>
 
+    </div>
+    
+
     
     <div class="mitologia">
         <div class="item">
@@ -748,16 +751,16 @@
 
         
         <!-- Informações da Mitologia Grega -->
-        <div class="mitologia-grega content" style="display:none;">
+        <div class="mitologia-grega content conteudo-rolavel" style="display:none;">
             <h4 style="font-size: 22px">Mitologia e Ciência</h4>
             <p style="font-size: 18px">A mitologia grega não se limitava apenas às histórias de deuses e heróis; ela também influenciava profundamente o pensamento científico e filosófico da Grécia Antiga. Muitos conceitos científicos e naturais estavam imersos nas narrativas mitológicas, onde fenômenos da natureza eram explicados por meio das ações e comportamentos dos deuses e criaturas míticas. Por exemplo, a relação entre o céu e a terra, a criação do mundo e a origem dos elementos naturais, como o fogo, a água e a terra, eram temas abordados em mitos, mas também inspiraram as primeiras especulações científicas. Filósofos como Tales de Mileto, que acreditava que a água era o princípio de todas as coisas, e Aristóteles, que sistematizou a ideia de causalidade e estudo da natureza, estavam, de certa forma, buscando a mesma explicação para o mundo que os mitos procuravam transmitir, mas com métodos mais racionais e observacionais.</p>
             <p style="font-size: 18px">
                 A mitologia também inspirou importantes figuras na ciência e na medicina. Deuses como Asclépio, deus da medicina, e Héstia, deusa do lar, eram reverenciados e associados ao cuidado da saúde e ao equilíbrio da vida humana. Assim, as divindades e suas histórias ajudaram a cultivar um ambiente culturalmente fértil para o surgimento da medicina, da astronomia e da matemática, que mais tarde se tornariam pilares da ciência moderna.
             </p>
             <div style="display: flex; justify-content: space-around;">
-                <img src="../img/Aristóteles.png" alt="Aristóteles" width="100">
-                <img src="../img/ciencia-flaticon.png" alt="Ícone ciência" width="100">
-                <img src="../img/Héstia.png" alt="Héstia" width="100">
+                <img src="../img/Aristóteles.png" alt="Aristóteles">
+                <img src="../img/ciencia-flaticon.png" alt="Ícone ciência">
+                <img src="../img/Héstia.png" alt="Héstia">
                 
             </div>
             
@@ -765,28 +768,28 @@
             <p style="font-size: 18px">A mitologia grega é rica em deuses e deusas, que personificam forças naturais, aspectos da vida humana e os elementos do cosmos. O rei dos deuses é Zeus, frequentemente mostrado entre nuvens ou sentado no topo do Monte Olimpo. Sua esposa, Hera, era a deusa do casamento e da fertilidade, e frequentemente se envolvia em disputas com Zeus, devido à sua natureza ciumenta. Deus do mar, dos cavalos e dos terremotos, Poseidon é frequentemente mostrado conduzindo uma carruagem de cavalos ou criaturas marinhas e empunhando o tridente que ele usava para controlar as ondas.  Atena, filha de Zeus, era a deusa da sabedoria, da estratégia militar e da justiça, muitas vezes associada à razão e à virtude. Deméter era a deusa da agricultura e da colheita e é frequentemente retratada com plantações como cevada e trigo, ou uma cornucópia de produtos. Deméter também presidia a fertilidade da terra e o ciclo natural da vida e da morte. O mensageiro dos deuses era Hermes. Os símbolos de Hermes incluem o caduceu - um cajado entrelaçado com duas cobras - assim como suas sandálias e boné alados, e uma tartaruga. Ártemis era a deusa da caça, dos animais selvagens, da castidade e do parto. Ela é frequentemente mostrada com um veado ou um cão de caça. Dionísio era o deus do vinho, das videiras, da fertilidade e da festividade. Ele é mais frequentemente mostrado com uvas e videiras.</p>
             <p style="font-size: 18px">Os deuses gregos, com suas personalidades complexas e histórias repletas de amores, vinganças, traições e aventuras, moldaram a cultura e o pensamento dos gregos antigos, sendo reverenciados em templos e festivais em todo o mundo grego. Mesmo após milhares de anos, suas histórias ainda inspiram a literatura, a arte e a filosofia, sendo um símbolo do poder da mitologia na formação de mitos universais sobre a vida, a natureza e o destino.</p>
             <div style="display: flex; justify-content: space-around;">
-                <img src="../img/zeus.png" alt="Zeus" width="100">
-                <img src="../img/dionisio.png" alt="Dionísio" width="100">
-                <img src="../img/artemis.png" alt="Ártemis" width="100">
+                <img src="../img/zeus.png" alt="Zeus">
+                <img src="../img/dionisio.png" alt="Dionísio">
+                <img src="../img/artemis.png" alt="Ártemis">
             </div>
 
             <h4 style="font-size: 22px">Heróis</h4>
             <p style="font-size: 18px">Entre os heróis mais conhecidos da mitologia grega, Hércules é talvez o mais famoso. Filho de Zeus e da mortal Alcmena, Hércules possuía força imensa, sendo capaz de enfrentar monstros e completar tarefas quase impossíveis. Outro grande herói foi Aquiles, o guerreiro quase invencível da Guerra de Troia. Filho da deusa Tétis e do mortal Peleu, Aquiles foi criado para ser o maior dos heróis gregos. Sua única fraqueza era o calcanhar, que ficou famoso após sua morte, quando uma flecha, disparada por Páris, atingiu exatamente esse ponto. Ulisses, o astuto rei de Ítaca, também é considerado um dos maiores heróis gregos. Conhecido por sua inteligência e habilidades estratégicas, Ulisses foi o protagonista da famosa "Odisseia", na qual enfrenta uma série de desafios durante seu retorno para casa após a Guerra de Troia. Sua jornada inclui encontros com monstros míticos como o Ciclope e a feiticeira Circe, além de inúmeras provações que testaram sua paciência, engenhosidade e resistência.</p>
             <div style="display: flex; justify-content: space-around;">
-                <img src="../img/hercules.png" alt="Hércules" width="100">
-                <img src="../img/cavalo-de-troia.png" alt="Cavalo de Tróia" width="100">
-                <img src="../img/aquiles.png" alt="Aquiles" width="100">
+                <img src="../img/hercules.png" alt="Hércules">
+                <img src="../img/cavalo-de-troia.png" alt="Cavalo de Tróia">
+                <img src="../img/aquiles.png" alt="Aquiles">
             </div>
         </div>
         <!-- Informações da Mitologia Romana -->
-        <div class="mitologia-romana content" style="display:none;">
+        <div class="mitologia-romana content conteudo-rolavel" style="display:none;">
             <h4 style="font-size: 22px">Mitologia e Ciência</h4>
             <p style="font-size: 18px">A mitologia romana, embora profundamente influenciada pela mitologia grega, tem suas próprias particularidades, e suas divindades eram associadas não apenas à vida cotidiana e aos valores culturais, mas também à ciência e ao entendimento do universo. Os romanos, conhecidos por sua habilidade em adaptar e integrar conhecimentos de diferentes culturas, estabeleceram uma conexão entre suas crenças mitológicas e a evolução do pensamento científico.</p>
             <p style="font-size: 18px">As divindades romanas eram frequentemente vistas como guardiãs de áreas essenciais da vida humana, e sua influência era sentida em muitos campos da ciência, como medicina, astronomia e engenharia. Deuses como Esculápio, o deus da medicina e da cura, desempenhavam um papel fundamental no desenvolvimento das práticas médicas. A deusa Vênus, associada ao amor e à beleza, também tinha uma conexão com as ciências naturais, especialmente na forma como os romanos compreendiam a harmonia do corpo humano e a saúde. Sua influência pode ser vista no modo como os romanos abordavam a anatomia e a medicina preventiva, com foco na beleza, no equilíbrio e na saúde física e emocional.</p>
             <div style="display: flex; justify-content: space-around;">
-                <img src="../img/esculapio.jpg" alt="Esculápio" width="100">
-                <img src="../img/saude.png" alt="Aquiles" width="100">
-                <img src="../img/venus.jpg" alt="Vênus" width="100">
+                <img src="../img/esculapio.jpg" alt="Esculápio">
+                <img src="../img/saude.png" alt="Aquiles">
+                <img src="../img/venus.jpg" alt="Vênus">
                 
             </div>
             
@@ -794,18 +797,18 @@
             <p style="font-size: 18px">A mitologia romana, rica em divindades e mitos, reflete a importância da religião na vida cotidiana e na cultura do Império Romano. Embora os romanos tenham adaptado muitas de suas crenças dos gregos, suas divindades eram únicas e estavam profundamente entrelaçadas com o conceito de dever, moralidade e a preservação da ordem social. Os deuses romanos representavam aspectos essenciais da vida humana, como a guerra, a agricultura, o lar, o amor e a justiça.</p>
             <p style="font-size: 18px">Júpiter, na mitologia romana, era o rei dos deuses e governante do céu e do trovão. Júpiter era associado à soberania e à autoridade, sendo reverenciado pelos imperadores romanos como a figura divina que legitimava seu poder. Juno, esposa de Júpiter, era a deusa do casamento, da fertilidade e da maternidade. Como guardiã das mulheres e da família, Juno era uma das divindades mais reverenciadas em Roma. Netuno, irmão de Júpiter, era o deus dos mares e dos oceanos. Além de ser associado ao mar, ele também governava as fontes de água doce e as cavidades subterrâneas, simbolizando a força da natureza e sua imprevisibilidade. Plutão era o deus do submundo e do reino dos mortos. Embora seu reino fosse sombrio e temido, Plutão também representava a fertilidade da terra, pois acreditava-se que sua presença garantisse a renovação das colheitas. Marte, deus da guerra, era um dos deuses mais importantes no panteão romano. Representava a força militar, a coragem e o espírito de luta, sendo celebrado pelos soldados e os generais.</p>
             <div style="display: flex; justify-content: space-around;">
-                <img src="../img/jupiter.png" alt="Júpiter" width="100">
-                <img src="../img/netuno.png" alt="Netuno" width="100">
-                <img src="../img/juno.png" alt="Juno" width="100">
+                <img src="../img/jupiter.png" alt="Júpiter">
+                <img src="../img/netuno.png" alt="Netuno">
+                <img src="../img/juno.png" alt="Juno">
             </div>
 
             <h4 style="font-size: 22px">Heróis</h4>
             <p style="font-size: 18px">Enquanto os heróis gregos eram conhecidos por suas aventuras épicas e por lutar contra monstros e divindades, os heróis romanos eram, em grande parte, símbolos das qualidades que Roma valorizava: disciplina, honra, lealdade ao Estado e dedicação ao bem comum. Suas histórias muitas vezes refletiam os ideais da República e do Império Romano, sendo mais focadas no sacrifício pessoal, na construção de Roma e na expansão de seu poder.</p>
             <p style="font-size: 18px">Eneias, o herói romano mais famoso, é talvez o exemplo mais emblemático. Filho de Anquises e da deusa Vênus, Eneias é o protagonista da famosa obra "Eneida", de Virgílio, que narra sua jornada após a queda de Troia. Eneias simboliza o valor do dever e da honra, e sua determinação em seguir os desígnios dos deuses, mesmo diante de grandes adversidades, o tornou um herói venerado por romanos. Outro herói notável foi Rômulo, o lendário fundador de Roma. Filho de Marte e de Reia Silvia, Rômulo e seu irmão gêmeo Remo foram abandonados às margens do rio Tibre, mas foram resgatados por uma loba e criados por um pastor. Rômulo, com sua bravura e liderança, fundou Roma após uma disputa com Remo sobre a localização da cidade. Outro herói importante da história de Roma é Júlio César, uma figura histórica que se tornou quase um mito. Embora sua ascensão ao poder tenha sido marcada por intrigas políticas e militares, César é lembrado como um líder extraordinário, cujas conquistas militares expandiram o Império Romano para além de suas fronteiras originais. Sua coragem em batalhas, sua habilidade estratégica e seu apelo popular o transformaram em um herói nacional.</p>
             <div style="display: flex; justify-content: space-around;">
-                <img src="../img/imperador-romano.png" alt="Imperador" width="100">
-                <img src="../img/coliseu.png" alt="Coliseu" width="100">
-                <img src="../img/roma.png" alt="Roma" width="100">
+                <img src="../img/imperador-romano.png" alt="Imperador">
+                <img src="../img/coliseu.png" alt="Coliseu">
+                <img src="../img/roma.png" alt="Roma">
                 
             </div>
         </div>
