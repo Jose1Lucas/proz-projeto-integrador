@@ -69,14 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuIcon.addEventListener("click", () => {
     navbar.classList.toggle("menu-active"); // Alterna a exibição do menu
-    // document.body.classList.toggle("blur"); // Desfoca o conteúdo principal
   });
 
   // Fecha o menu ao clicar fora dele
   document.addEventListener("click", (e) => {
     if (!menuContent.contains(e.target) && !menuIcon.contains(e.target)) {
       navbar.classList.remove("menu-active");
-      // document.body.classList.remove("blur");
     }
   });
 });

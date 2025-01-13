@@ -58,8 +58,8 @@ body {
     background-color: #6B4226;
     z-index: 1000;
     transition: background-color 0.3s ease-in-out;
-    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
 }
+
 .navbar img {
     height: 40px;
     margin-right: 20px;
@@ -82,8 +82,6 @@ body {
     margin: 0 auto;
     border-bottom: 2px solid transparent;
     transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
-    /* background-color: #c1bfbd; */
-    /* color: white; */
 }
 .navbar-links {
     display: flex;
@@ -132,9 +130,6 @@ body {
 
 
 @media screen and (max-width: 768px) {
-    /* .navbar-links{
-        display: none;
-    } */
     .navbar a {
         display: none; /*Esconde os links */
     }
@@ -154,16 +149,8 @@ body {
         background-color: #6B4226;
         border-bottom: 2px solid transparent;
         transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
-        /* border-bottom: 1px solid #ddd; */
     }
 
-/* @media screen and (min-width: 769px;) {
-    .navbar a {
-        display: block;
-    }
-    
-} */
-    
 }
 .content {
     margin-top: 60px;
