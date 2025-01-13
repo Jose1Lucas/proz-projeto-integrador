@@ -102,13 +102,14 @@ body {
     left: -250px; /* Esconde o menu fora da tela inicialmente */
     width: 250px;
     height: 100%;
-    background-color: #6B4226;
+    background-color: #6b4226;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     transition: left 0.3s ease-in-out;
+    display: none;
 }
 
 .menu-content a {
@@ -126,11 +127,12 @@ body {
 /* Classe para ativar o menu */
 .menu-active .menu-content {
     left: 0; /* Faz o menu deslizar para dentro da tela */
+    display: flex;
 }
 
 
 @media screen and (max-width: 768px) {
-    .navbar a {
+    .navbar-links {
         display: none; /*Esconde os links */
     }
     .navbar img {
@@ -143,7 +145,7 @@ body {
     }
     .menu-active .menu-content a {
         display: block; /* Mostra os links quando o menu está ativo */
-        text-align: left;
+        text-align: center;
         padding: 10px;
         color: white;
         background-color: #6B4226;
