@@ -18,6 +18,37 @@ mark {
   background-color: #f4eae6;
 }
 
+/* Estilos para o elemento .conteudo-rolavel */
+.conteudo-rolavel {
+  overflow: auto;
+}
+
+/* Define apenas a largura e altura da barra de rolagem para o elemento com a classe .conteudo-rolavel */
+.conteudo-rolavel::-webkit-scrollbar,
+.timeline::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* NÃO aplique estilos ao trilho, deixando-o com estilo padrão */
+.conteudo-rolavel::-webkit-scrollbar-track,
+.timeline::-webkit-scrollbar-track {
+  background: inherit; /* Mantém o estilo padrão */
+}
+
+/* Personaliza o polegar */
+.conteudo-rolavel::-webkit-scrollbar-thumb,
+.timeline::-webkit-scrollbar-thumb {
+  background: #6b4226; /* Cor do polegar */
+  border-radius: 5px; /* Arredondamento */
+}
+
+/* Polegar ao passar o mouse */
+.conteudo-rolavel::-webkit-scrollbar-thumb:hover,
+.timeline::-webkit-scrollbar-thumb:hover {
+  background: #a05b37;
+}
+
 .banner {
   width: 100%;
   height: auto;
@@ -64,7 +95,6 @@ mark {
   padding: 14px 20px;
   position: relative;
   text-decoration: none;
-  /*transition: color 0.3s ease;*/
 }
 
 .navbar a:hover {
@@ -99,7 +129,7 @@ mark {
 .menu-content {
   position: fixed;
   top: 0;
-  left: -2500px; /* Esconde o menu fora da tela inicialmente */
+  left: -250px; /* Esconde o menu fora da tela inicialmente */
   width: 250px;
   height: 100%;
   background-color: #6b4226;
@@ -109,6 +139,7 @@ mark {
   flex-direction: column;
   gap: 10px;
   transition: left 0.3s ease-in-out;
+  display: none;
 }
 
 .menu-content a {
@@ -124,8 +155,9 @@ mark {
 }
 
 /* Classe para ativar o menu */
-.menu-active .menu-content {
+.menu-content.menu-active {
   left: 0; /* Faz o menu deslizar para dentro da tela */
+  display: flex;
 }
 
 /* Linha do tempo horizontal */
@@ -246,10 +278,10 @@ a:hover {
   vertical-align: middle; /* Alinha verticalmente a imagem */
 }
 
-#mapa {
-  display: inline-block;
-  border: 2px solid #5e503f;
-  margin-bottom: 20px;
+.mapa svg {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* ou object-fit: cover; */
 }
 
 /* Caixa de informações */
@@ -275,6 +307,16 @@ a:hover {
   font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+/* Estilos para as imagens dentro do container flex */
+.mitologia-grega,
+.mitologia-romana > div[style*="display: flex"] > img {
+  max-width: 100%;
+  height: auto;
+  flex-basis: 30%; /* Valor mínimo para o flex-basis */
+  max-height: 150px;
+  max-width: fit-content; /* Adiciona largura máxima flexível */
 }
 
 .mitologia-romana,
@@ -384,62 +426,62 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .banner img {
-    height: 200px;
+  h1 {
+    font-size: 36px;
+  }
+  .mitologia-romana,
+  .mitologia-grega > div[style*="display: flex"] > img {
+    flex-basis: 40%; /* Ajustamos o flex-basis para telas médias */
+    max-height: 100px; /* Ajuste a altura para telas médias */
+  }
+
+  .mapa svg {
+    height: 300px;
+  }
+  .content p {
+    font-size: 17px;
+  }
+
+  .timeline {
+    flex-direction: column;
+  }
+  .navbar-links {
+    display: none; /* Esconde os links inicialmente */
+    flex-direction: column; /* Links aparecem empilhados */
+    background-color: white; /* Fundo para o menu dropdown */
+    position: absolute; /* Para que o menu apareça como um dropdown */
+    top: 50px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .menu-icon {
+    display: block; /* Mostra o botão em telas menores */
   }
   .navbar a {
-    padding: 10px;
+    display: block; /* Mostra os links em telas menores */
+    text-align: left; /* Ajusta o alinhamento, se necessário */
+    padding: 10px; /* Ajusta o espaçamento */
   }
+  .button {
+    font-size: 21px;
+  }
+
   footer {
     padding: 10px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  /* .navbar-links{
-      display: none;
-  } */
-  .navbar a {
-    display: none; /*Esconde os links */
-  }
-  .navbar img {
-    margin-right: auto; /*Centraliza o logo */
-  }
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-  }
-  .menu-active .menu-content a {
-    display: block; /* Mostra os links quando o menu está ativo */
-    text-align: left;
-    padding: 10px;
-    color: white;
-    background-color: #6b4226;
-    border-bottom: 2px solid transparent;
-    transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
-  }
-  .timeline {
-    flex-direction: column; /* Alinha os itens verticalmente */
-    justify-content: center; /* Centraliza os itens */
-    padding: 30px 10px;
-    gap: 15px; /* Reduz a distância entre os itens */
-  }
-  .container {
-    min-width: 200px; /* Diminuir a largura mínima para caber em telas menores */
-    max-width: 250px; /* Limita a largura máxima */
-    font-size: 18px; /* Reduz o tamanho da fonte */
-    margin: 0 10px;
-  }
-  .content {
-    height: auto; /* Permite que a altura seja ajustada conforme o conteúdo */
-    padding: 10px;
-  }
+/* Mostrar links quando o menu estiver ativo */
+.navbar-links.active {
+  display: flex;
 }
 
-@media screen and (max-width: 768px) {
-  #mapa {
-    width: 100%; /* O mapa ocupa 100% da largura do contêiner */
-    height: auto; /* A altura é ajustada proporcionalmente */
+@media (max-width: 480px) {
+  .mitologia-romana,
+  .mitologia-grega > div[style*="display: flex"] > img {
+    flex-basis: 50%; /* Ajustamos o flex-basis para telas pequenas */
+    max-height: 50px; /* Ajuste a altura para telas pequenas */
   }
 }
