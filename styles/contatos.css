@@ -4,13 +4,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4eae6;
 }
 
 .banner {
     width: 100%;
     height: auto; 
-    margin-top: 1px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,21 +20,29 @@ body {
 
 .banner img {
     width: 100%;
-    height: auto; 
+    height: auto;
+    object-fit: cover;
 }
 
 .navbar {
-    background-color: #6B4226;
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    padding: 10px;
+    justify-content: left;
+    padding: 10px 20px;
+    background-color: #6B4226;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .navbar img {
     height: 40px;
-    margin-right: 20px;
+    margin-right: 10px;
+    padding-left: 10px;
 }
 
 .navbar a {
@@ -42,9 +50,15 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 10px 27px;
     text-decoration: none;
 }
+
+.navbar a:hover {
+    border-bottom: 2px solid white;
+    transition: border-color 0.3s ease-in-out; 
+}
+
 #conheca-nos h2 {
     padding-top: 50px;
     color: #A34A28;
@@ -147,7 +161,11 @@ footer {
     color: white;
     background-color: #6B4226;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    height: 30px; /* Definir uma altura fixa */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
     position: relative;
     bottom: 0;
     width: 100%;
