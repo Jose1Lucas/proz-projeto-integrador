@@ -140,6 +140,7 @@ mark {
   gap: 10px;
   transition: left 0.3s ease-in-out;
   display: none;
+  z-index: 1001; /* Colocar o menu por cima da barra de navegação */
 }
 
 .menu-content a {
@@ -310,20 +311,21 @@ a:hover {
 }
 
 /* Estilos para as imagens dentro do container flex */
-.mitologia-grega,
-.mitologia-romana > div[style*="display: flex"] > img {
+html .mitologia-grega .content img, /* Seletor específico */
+html .mitologia-romana .content img {
+  /* Seletor específico */
   max-width: 100%;
   height: auto;
-  flex-basis: 30%; /* Valor mínimo para o flex-basis */
   max-height: 150px;
-  max-width: fit-content; /* Adiciona largura máxima flexível */
+  object-fit: contain;
+  flex-basis: auto;
 }
 
 .mitologia-romana,
 .mitologia-grega.content {
   padding: 18px;
-  overflow-y: auto; /* Adiciona uma barra de rolagem se necessário */
-  max-height: 80vh;
+  overflow-y: auto;
+  height: auto; /* Permitir que a altura seja auto */
 }
 
 .mitologia-grega h4 {
@@ -429,10 +431,15 @@ footer {
   h1 {
     font-size: 36px;
   }
-  .mitologia-romana,
-  .mitologia-grega > div[style*="display: flex"] > img {
+  html .mitologia-romana .content img,  /* Corrigido o seletor */
+  html .mitologia-grega .content img {
+    /* Corrigido o seletor */
     flex-basis: 40%; /* Ajustamos o flex-basis para telas médias */
-    max-height: 100px; /* Ajuste a altura para telas médias */
+  }
+  .mitologia-romana,
+  .mitologia-grega.content {
+    /* max-height: 60vh; */ /* Removido */
+    height: auto;
   }
 
   .mapa svg {
@@ -456,13 +463,12 @@ footer {
   .menu-icon {
     display: block; /* Mostra o botão em telas menores */
   }
+
   .navbar a {
-    display: block; /* Mostra os links em telas menores */
-    text-align: left; /* Ajusta o alinhamento, se necessário */
-    padding: 10px; /* Ajusta o espaçamento */
+    display: block; /* Exibe os links da navbar em telas grandes */
   }
-  .button {
-    font-size: 21px;
+  .menu-content {
+    display: none;
   }
 
   footer {
@@ -470,15 +476,18 @@ footer {
   }
 }
 
-/* Mostrar links quando o menu estiver ativo */
-.navbar-links.active {
-  display: flex;
-}
-
 @media (max-width: 480px) {
-  .mitologia-romana,
-  .mitologia-grega > div[style*="display: flex"] > img {
+  html .mitologia-romana .content img,
+  html .mitologia-grega .content img {
+    /* Corrigido o seletor */
     flex-basis: 50%; /* Ajustamos o flex-basis para telas pequenas */
-    max-height: 50px; /* Ajuste a altura para telas pequenas */
+  }
+}
+@media screen and (min-width: 769px) {
+  .navbar a {
+    display: block; /* Exibe os links da navbar em telas grandes */
+  }
+  .menu-content {
+    display: none;
   }
 }
