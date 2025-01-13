@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Gentium Book Plus", serif;
+    font-size: 20px;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@ body {
 .banner {
     width: 100%;
     height: auto; 
-    margin-top: 10px;
+    margin-top: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,7 +185,7 @@ footer {
 
 #conheca-nos p {
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
 }
 
