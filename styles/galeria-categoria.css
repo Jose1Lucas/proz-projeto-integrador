@@ -1,8 +1,13 @@
-html, body {
-  height: 100%; /* Garante que a altura total seja 100% */
-  margin: 0; /* Remove as margens padrão */
-  display: flex; /* Flexbox para estruturar */
-  flex-direction: column; /* Organiza os elementos verticalmente */
+html,
+body {
+  height: 100%;
+  /* Garante que a altura total seja 100% */
+  margin: 0;
+  /* Remove as margens padrão */
+  display: flex;
+  /* Flexbox para estruturar */
+  flex-direction: column;
+  /* Organiza os elementos verticalmente */
   overflow-x: hidden;
 }
 
@@ -17,9 +22,10 @@ body {
   background-color: #f4eae6;
   overflow-x: hidden;
 }
+
 .banner {
   width: 100%;
-  height: auto; 
+  height: auto;
   margin-top: 70px;
   display: flex;
   justify-content: center;
@@ -34,17 +40,19 @@ body {
   object-fit: cover;
 }
 
-@media  screen and (max-width: 768px) {
-  .banner img{
-      height: 200px;
+@media screen and (max-width: 768px) {
+  .banner img {
+    height: 200px;
   }
+
   .navbar a {
-      padding: 10px;
+    padding: 10px;
   }
+
   footer {
-      padding: 10px;
+    padding: 10px;
   }
-  
+
 }
 
 .navbar {
@@ -62,6 +70,7 @@ body {
   transition: background-color 0.3s ease-in-out;
   /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
 }
+
 .navbar img {
   height: 40px;
   margin-right: 20px;
@@ -87,6 +96,7 @@ body {
   /* background-color: #c1bfbd; */
   /* color: white; */
 }
+
 .navbar-links {
   display: flex;
   gap: 15px;
@@ -103,7 +113,8 @@ body {
 .menu-content {
   position: fixed;
   top: 0;
-  left: -2500px; /* Esconde o menu fora da tela inicialmente */
+  left: -2500px;
+  /* Esconde o menu fora da tela inicialmente */
   width: 250px;
   height: 100%;
   background-color: #6B4226;
@@ -129,38 +140,46 @@ body {
 
 /* Classe para ativar o menu */
 .menu-active .menu-content {
-  left: 0; /* Faz o menu deslizar para dentro da tela */
+  left: 0;
+  /* Faz o menu deslizar para dentro da tela */
 }
 
 
 @media screen and (max-width: 768px) {
+
   /* .navbar-links{
       display: none;
   } */
   .navbar a {
-      display: none; /*Esconde os links */
-  }
-  .navbar img {
-      margin-right: auto; /*Centraliza o logo */
-  }
-  .menu-icon {
-      display: block;
-      cursor: pointer;
-      margin-right: 45px;
-      padding: 10px;
-  }
-  .menu-active .menu-content a {
-      display: block; /* Mostra os links quando o menu está ativo */
-      text-align: left;
-      padding: 10px;
-      color: white;
-      background-color: #6B4226;
-      border-bottom: 2px solid transparent;
-      transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
-      /* border-bottom: 1px solid #ddd; */
+    display: none;
+    /*Esconde os links */
   }
 
-/* @media screen and (min-width: 769px;) {
+  .navbar img {
+    margin-right: auto;
+    /*Centraliza o logo */
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    margin-right: 45px;
+    padding: 10px;
+  }
+
+  .menu-active .menu-content a {
+    display: block;
+    /* Mostra os links quando o menu está ativo */
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #6B4226;
+    border-bottom: 2px solid transparent;
+    transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
+    /* border-bottom: 1px solid #ddd; */
+  }
+
+  /* @media screen and (min-width: 769px;) {
   .navbar a {
       display: block;
   }
@@ -185,8 +204,7 @@ body {
   flex-shrink: 0;
   width: 100%;
   height: 20px;
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 10"%3E%3Cpath d="M0,0 C5,10 10,0 15,10 C20,0 25,10 30,0" fill="transparent" stroke="%23A34A28" stroke-width="2"/%3E%3C/svg%3E')
-  repeat-x;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 10"%3E%3Cpath d="M0,0 C5,10 10,0 15,10 C20,0 25,10 30,0" fill="transparent" stroke="%23A34A28" stroke-width="2"/%3E%3C/svg%3E') repeat-x;
   background-size: 30px 10px;
 }
 
@@ -228,12 +246,13 @@ body {
   color: #333;
   line-height: 1.5;
 }
+
 footer {
   background: #6B4226;
   color: #fff;
   text-align: center;
   padding: 15px;
-  margin-top: auto; 
+  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
