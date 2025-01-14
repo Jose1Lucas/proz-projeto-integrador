@@ -310,6 +310,35 @@ footer {
   h1 {
     font-size: 36px;
   }
+  .container-secoes {
+    flex-direction: column;
+  }
+  .container-secoes section {
+    flex: 0 1 auto; /* Permite que as seções redimensionem livremente */
+    width: 100%;
+    box-sizing: border-box; /* Evita estouro de layout */
+  }
+  #contato h2 {
+    padding-top: 28px;
+  }
+  ul {
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  ul li a {
+    font-size: 15px;
+    margin-left: 6px;
+  }
+  ul li i {
+    font-size: 25px;
+  }
+  #conheca-nos p {
+    font-size: 18px;
+  }
+  #contato p {
+    font-size: 18px;
+  }
 
   .navbar-links {
     display: none;
@@ -331,6 +360,20 @@ footer {
   }
   .menu-content {
     display: none;
+  }
+  form {
+    width: 95%;
+    padding: 15px;
+  }
+
+  form input,
+  form textarea {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  form button {
+    font-size: 20px;
   }
 
   footer {
