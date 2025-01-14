@@ -42,7 +42,7 @@ class Section extends HTMLElement {
         margin-bottom: 15px;
         }
     .section p {
-        font-size: 14px;
+        font-size: 20px;
         color: #555;
         text-align: justify;
         }
@@ -65,8 +65,16 @@ customElements.define("custom-section", Section);
 document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.querySelector(".menu-icon");
   const navbar = document.querySelector(".navbar");
+  const menuContent = document.querySelector(".menu-content");
 
   menuIcon.addEventListener("click", () => {
-    navbar.classList.toggle("active"); // Alterna a classe "active"
+    navbar.classList.toggle("menu-active"); // Alterna a exibição do menu
+  });
+
+  // Fecha o menu ao clicar fora dele
+  document.addEventListener("click", (e) => {
+    if (!menuContent.contains(e.target) && !menuIcon.contains(e.target)) {
+      navbar.classList.remove("menu-active");
+    }
   });
 });

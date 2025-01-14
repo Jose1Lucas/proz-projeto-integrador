@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bacasime+Antique&family=Forum&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Martian+Mono:wght@100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bacasime+Antique&family=Forum&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Martian+Mono:wght@100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap");
 * {
-  font-family: "Noto Sans", serif;
+  font-family: "Gotium Book Plus", serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,50 +9,154 @@
 body {
   background-color: #f4eae6;
   color: #242424;
+  font-size: 20px;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 mark {
   background-color: #f4eae6;
 }
 
+/* Estilos para o elemento .conteudo-rolavel */
+.conteudo-rolavel {
+  overflow: auto;
+}
+
+/* Define apenas a largura e altura da barra de rolagem para o elemento com a classe .conteudo-rolavel */
+.conteudo-rolavel::-webkit-scrollbar,
+.timeline::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.conteudo-rolavel::-webkit-scrollbar-track,
+.timeline::-webkit-scrollbar-track {
+  background: inherit; /* Mantém o estilo padrão */
+}
+
+.conteudo-rolavel::-webkit-scrollbar-thumb,
+.timeline::-webkit-scrollbar-thumb {
+  background: #6b4226; /* Cor do polegar */
+  border-radius: 5px; /* Arredondamento */
+}
+
+.conteudo-rolavel::-webkit-scrollbar-thumb:hover,
+.timeline::-webkit-scrollbar-thumb:hover {
+  background: #a05b37;
+}
+
 .banner {
   width: 100%;
   height: auto;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
   background-position: center;
-  margin-top: 0;
 }
 
 .banner img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .navbar {
-  background-color: #6b4226;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: left;
   padding: 10px 20px;
-  margin-bottom: 0;
+  background-color: #6b4226;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .navbar img {
   height: 40px;
-  justify-content: space-between;
+  margin-right: 20px;
+  padding-left: 10px;
 }
 
 .navbar a {
-  display: flex;
+  float: left;
+  display: block;
   color: white;
   text-align: center;
   padding: 14px 20px;
+  position: relative;
   text-decoration: none;
-  justify-content: space-around;
-  align-items: center;
+}
+
+.navbar a:hover {
+  content: "";
+  display: block;
+  width: 50%;
+  background-color: transparent;
+  color: white;
+  margin: 0 auto;
+  border-bottom: 2px solid transparent;
+  transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.navbar a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.menu-content {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Esconde o menu fora da tela inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #6b4226;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: left 0.3s ease-in-out;
+  display: none;
+  z-index: 1001;
+}
+
+.menu-content a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.menu-content a:hover {
+  background-color: #6b4226;
+}
+
+/* Classe para ativar o menu */
+.menu-content.menu-active {
+  left: 0; /* Faz o menu deslizar para dentro da tela */
+  display: flex;
 }
 
 /* Linha do tempo horizontal */
@@ -70,18 +173,6 @@ mark {
   flex-direction: row;
 }
 
-/* Linha central conectando os elementos */
-.timeline::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  left: 0;
-  height: 3px;
-  background-color: #ffd900;
-  top: 50%;
-  z-index: 1;
-}
-
 .timeline-controls {
   position: relative;
   z-index: 10;
@@ -94,12 +185,13 @@ mark {
   position: relative;
   overflow-x: auto; /* Permite rolar horizontalmente */
   scroll-behavior: smooth;
+  font-size: 20px;
   min-width: 250px;
   max-width: 300px;
   text-align: center;
   margin: 0 15px;
   z-index: 2;
-  border-top: 2px solid #aba8a8;
+  border-top: 2px solid #989285;
   flex-shrink: 0;
   scroll-behavior: smooth;
 }
@@ -127,13 +219,13 @@ h1 {
 /* Título dentro da linha do tempo */
 .content h2 {
   color: #333;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .content p {
-  font-size: 14px;
-  color: #3f3d3d;
+  font-size: 16px;
+  color: #2f2b2b;
 }
 
 a {
@@ -153,22 +245,171 @@ a:hover {
   max-width: 210px;
   height: 100px;
   object-fit: contain;
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .mapa-container,
-.referencia,
+.mitologia,
 .tempo {
   display: flex;
-  align-items: center; /* Alinha a imagem e o título verticalmente */
+  align-items: center;
   gap: 10px;
   margin: 12px;
   border-bottom: 4px solid #6b4226;
+  margin-top: 30px;
+}
+
+.intro-mitologia {
+  margin-top: 50px;
+  text-align: center;
+  color: #2f2b2b;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.intro-mitologia h2 {
+  color: #a34a28;
+  padding: 5px;
 }
 
 .item img {
-  vertical-align: middle; /* Alinha verticalmente a imagem */
+  vertical-align: middle;
+}
+
+.mapa svg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#info-box {
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #5e503f;
+  background-color: #fff4d9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  text-align: left;
+}
+
+.button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #d4a017;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilos para as imagens dentro do container flex */
+html .mitologia-grega .content img,
+html .mitologia-romana .content img {
+  /* Seletor específico */
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  flex-basis: auto;
+}
+
+.mitologia-romana,
+.mitologia-grega.content {
+  padding: 18px;
+  overflow-y: auto;
+  height: auto;
+}
+
+.mitologia-grega h4 {
+  padding: 5px;
+}
+
+.str3 {
+  stroke: black;
+  stroke-width: 10;
+  stroke-opacity: 0.501961;
+}
+.str5 {
+  stroke: black;
+  stroke-width: 50;
+}
+.str2 {
+  stroke: #003399;
+  stroke-width: 20;
+}
+.str7 {
+  stroke: #434242;
+  stroke-width: 10;
+}
+.str0 {
+  stroke: black;
+  stroke-width: 10;
+}
+.str4 {
+  stroke: black;
+  stroke-width: 10;
+}
+.str1 {
+  stroke: #003399;
+  stroke-width: 10;
+}
+.str8 {
+  stroke: #2b2a29;
+  stroke-width: 7.62;
+}
+.str6 {
+  stroke: black;
+  stroke-width: 7.62;
+}
+.fil4 {
+  fill: none;
+}
+.fil3 {
+  fill: none;
+  fill-rule: nonzero;
+}
+.fil1 {
+  fill: #fefefe;
+}
+.fil11 {
+  fill: #d9dada;
+}
+.fil0 {
+  fill: #2b2a29;
+}
+.fil2 {
+  fill: #fefefe;
+  fill-rule: nonzero;
+}
+.fil9 {
+  fill: #d9dada;
+  fill-rule: nonzero;
+}
+.fil10 {
+  fill: #434242;
+  fill-rule: nonzero;
+}
+.fil6 {
+  fill: #2b2a29;
+  fill-rule: nonzero;
+}
+.fil8 {
+  fill: black;
+  fill-rule: nonzero;
+}
+.fil7 {
+  fill: #fefefe;
+  fill-rule: nonzero;
+  fill-opacity: 0.501961;
+}
+.fil5 {
+  fill: #fefefe;
+  fill-opacity: 0.701961;
 }
 
 footer {
@@ -183,23 +424,64 @@ footer {
   width: 100%;
 }
 
-/* Media query para telas menores */
 @media screen and (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    align-items: flex-start;
+  h1 {
+    font-size: 36px;
+  }
+  html .mitologia-romana .content img,
+  html .mitologia-grega .content img {
+    flex-basis: 40%;
+  }
+  .mitologia-romana,
+  .mitologia-grega.content {
+    height: auto;
   }
 
-  .container::before {
+  .mapa svg {
+    height: 300px;
+  }
+
+  .timeline {
+    flex-direction: column;
+  }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar a {
+    display: block; /* Exibe os links da navbar em telas grandes */
+  }
+  .menu-content {
     display: none;
   }
 
-  .container::after {
-    top: 0;
-    margin-left: 0;
+  footer {
+    padding: 10px;
   }
+}
 
-  .timeline::before {
+@media (max-width: 480px) {
+  html .mitologia-romana .content img,
+  html .mitologia-grega .content img {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .navbar a {
+    display: block; /* Exibe os links da navbar em telas grandes */
+  }
+  .menu-content {
     display: none;
   }
 }

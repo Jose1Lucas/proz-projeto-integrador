@@ -7,16 +7,18 @@
 
 /*Configurações Gerais*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Gentium Book Plus", serif;
+    font-size: 20px;
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: #f4eae6;
+    overflow-x: hidden;
 }
 .banner {
     width: 100%;
     height: auto; 
-    margin-top: 90px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,16 +49,17 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #f4eae6;
-    overflow: hidden;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    padding: 10px 0;
-    width: 100%;
+    justify-content: left;
+    padding: 10px 20px;
+    background-color: #6B4226;
     z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
 }
+
 .navbar img {
     height: 40px;
     margin-right: 20px;
@@ -66,14 +69,23 @@ body {
 .navbar a {
     float: left;
     display: block;
-    color: rgb(4, 4, 4);
+    color: white;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
 }
+
 .navbar a:hover {
-    background-color: #c1bfbd;
-    color: white;
+    content: "";
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 2px solid transparent;
+    transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
+}
+.navbar-links {
+    display: flex;
+    gap: 15px;
 }
 
 .menu-icon {
@@ -84,8 +96,43 @@ body {
     padding: 10px;
 }
 
+.menu-content {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Esconde o menu fora da tela inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: #6b4226;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: left 0.3s ease-in-out;
+    display: none;
+}
+
+.menu-content a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.menu-content a:hover {
+    background-color: #6B4226;
+}
+
+/* Classe para ativar o menu */
+.menu-active .menu-content {
+    left: 0; /* Faz o menu deslizar para dentro da tela */
+    display: flex;
+}
+
+
 @media screen and (max-width: 768px) {
-    .navbar a {
+    .navbar-links {
         display: none; /*Esconde os links */
     }
     .navbar img {
@@ -96,14 +143,16 @@ body {
         cursor: pointer;
         padding: 10px;
     }
-    .navbar.active a {
+    .menu-active .menu-content a {
         display: block; /* Mostra os links quando o menu está ativo */
-        text-align: left;
+        text-align: center;
         padding: 10px;
-        background-color: #f4eae6;
-        border-bottom: 1px solid #ccc;
+        color: white;
+        background-color: #6B4226;
+        border-bottom: 2px solid transparent;
+        transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
     }
-    
+
 }
 .content {
     margin-top: 60px;
@@ -123,7 +172,7 @@ body {
 }
 
 footer {
-    background-color: #333;
+    background-color: #6B4226;
     color: white;
     text-align: center;
     padding: 20px;

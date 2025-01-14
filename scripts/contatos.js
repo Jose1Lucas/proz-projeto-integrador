@@ -17,18 +17,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-function mostrarInformacoes(tipo) {
-  // Esconde todas as seções
-  const mitologias = document.querySelectorAll(
-    ".mitologia-grega, .mitologia-romana"
-  );
-  mitologias.forEach((el) => (el.style.display = "none"));
-
-  // Mostra a mitologia selecionada
-  if (tipo === "grega") {
-    document.querySelector(".mitologia-grega").style.display = "block";
-  } else if (tipo === "romana") {
-    document.querySelector(".mitologia-romana").style.display = "block";
-  }
-}
