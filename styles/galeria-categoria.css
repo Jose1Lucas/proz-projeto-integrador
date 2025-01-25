@@ -1,13 +1,11 @@
 html, body {
-  height: 100%; /* Garante que a altura total seja 100% */
-  margin: 0; /* Remove as margens padrão */
-  display: flex; /* Flexbox para estruturar */
-  flex-direction: column; /* Organiza os elementos verticalmente */
+  height: 100%; 
+  margin: 0; 
+  display: flex; 
+  flex-direction: column; 
   overflow-x: hidden;
 }
 
-
-/*Configurações Gerais*/
 body {
   font-family: "Gentium Book Plus", serif;
   font-size: 20px;
@@ -16,23 +14,6 @@ body {
   padding: 0;
   background-color: #f4eae6;
   overflow-x: hidden;
-}
-
-.banner {
-  width: 100%;
-  height: auto; 
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 @media  screen and (max-width: 768px) {
