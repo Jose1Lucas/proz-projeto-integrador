@@ -21,18 +21,18 @@
         <div class="menu-icon">☰</div>
         <div class="menu-content">
           <a href="../index.html" class="active">Início</a>
-          <a href="artigo.html">Artigos</a>
-          <a href="galeria-categorias.html">Galeria</a>
-          <a href="fontes.html">Fontes</a>
-          <a href="contato.html">Contatos</a>
+          <a href="./artigo.html">Artigos</a>
+          <a href="./galeria-categorias.html">Galeria</a>
+          <a href="./fontes.html">Fontes</a>
+          <a href="./contato.html">Contatos</a>
         </div>
         <!-- Estes links devem estar visíveis em telas maiores -->
         <div class="navbar-links">
           <a href="index.html" class="active">Início</a>
-          <a href="telas/artigo.html">Artigos</a>
-          <a href="telas/galeria-categorias.html">Galeria</a>
-          <a href="telas/fontes.html">Fontes</a>
-          <a href="telas/contato.html">Contatos</a>
+          <a href="./artigo.html">Artigos</a>
+          <a href="./galeria-categorias.html">Galeria</a>
+          <a href="./fontes.html">Fontes</a>
+          <a href="./contato.html">Contatos</a>
         </div>
       </nav>
 
@@ -130,18 +130,21 @@
     <section id="formulario">
       <h2>Escreva sua mensagem</h2>
       <br />
-      <form action="#" method="post">
+      <form id="formulario">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
-        <br />
+        <input type="text" id="nome" name="nome" />
+        <small id="nome-helper" class="helper"></small>
+      
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required />
-        <br />
+        <input type="email" id="email" name="email" />
+        <small id="email-helper" class="helper"></small>
+      
         <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-        <br />
+        <textarea id="mensagem" name="mensagem"></textarea>
+        <small id="mensagem-helper" class="helper"></small>
+      
         <button type="submit">Enviar</button>
-      </form>
+      </form>      
     </section>
     <!-- Rodapé -->
     <br />
@@ -154,5 +157,6 @@
       </p>
     </footer>
     <script src="../scripts/contatos.js"></script>
+    <script src="../scripts/contatos-form.js"></script>
   </body>
 </html>

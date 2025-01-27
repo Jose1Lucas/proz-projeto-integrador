@@ -50,5 +50,21 @@ botaoRetroceder.addEventListener("click", decrementarPagina);
 // Inicializa a exibição
 atualizarPaginas();
 
-// Recarrega a página quando o botão de avançar ou retroceder for clicado
+// Adiciona um ouvinte de evento que será executado quando o conteúdo da página for completamente carregado
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // Seleciona o elemento de rodapé (footer) no HTML
+  const pageElement = document.querySelector("footer"); 
+  
+  // Verifica se o elemento foi encontrado na página
+  if (pageElement) {
+    
+    // Se o elemento footer for encontrado, ele será rolado até a área visível da tela com uma animação suave
+    pageElement.scrollIntoView({
+      behavior: "smooth",  // Define que a rolagem será suave
+      block: "center",     // Alinha o elemento ao centro da tela verticalmente
+      inline: "nearest"    // Ajusta a rolagem para alinhar horizontalmente o mais próximo possível
+    });
+  }
+});
 

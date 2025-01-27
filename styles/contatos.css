@@ -1,5 +1,5 @@
 * {
-  font-family: "Gotium Book Plus", serif;
+  font-family: "Gentium Book Plus", serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,6 +9,7 @@ body {
   font-size: 20px;
   line-height: 1.6;
   background-color: #f4eae6;
+  padding-top: 10px;
 }
 
 .banner {
@@ -76,8 +77,8 @@ body {
 }
 
 .navbar-links {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .menu-icon {
@@ -388,4 +389,29 @@ footer {
   .menu-content {
     display: none;
   }
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+}
+
+input.error,
+textarea.error {
+  border: 1px solid red;
+}
+
+input.correct,
+textarea.correct {
+  border: 1px solid green;
+}
+
+.helper {
+  display: none;
+  color: red;
+  font-size: 12px;
+}
+
+.helper.visible {
+  display: block;
 }

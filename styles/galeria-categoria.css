@@ -11,8 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-
-/*Configurações Gerais*/
 body {
   font-family: "Gentium Book Plus", serif;
   font-size: 20px;
@@ -68,7 +66,6 @@ body {
   background-color: #6B4226;
   z-index: 1000;
   transition: background-color 0.3s ease-in-out;
-  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar img {
@@ -93,8 +90,6 @@ body {
   margin: 0 auto;
   border-bottom: 2px solid transparent;
   transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
-  /* background-color: #c1bfbd; */
-  /* color: white; */
 }
 
 .navbar-links {
@@ -117,13 +112,14 @@ body {
   /* Esconde o menu fora da tela inicialmente */
   width: 250px;
   height: 100%;
-  background-color: #6B4226;
+  background-color: #6b4226;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   transition: left 0.3s ease-in-out;
+  display: none;
 }
 
 .menu-content a {
@@ -170,7 +166,7 @@ body {
   .menu-active .menu-content a {
     display: block;
     /* Mostra os links quando o menu está ativo */
-    text-align: center;
+    text-align: left;
     padding: 10px;
     color: white;
     background-color: #6B4226;
