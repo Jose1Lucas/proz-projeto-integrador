@@ -18,6 +18,37 @@ mark {
   background-color: #f4eae6;
 }
 
+.map-mediterranean-container {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #765639;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  max-width: 1123px;
+}
+
+.map-container .item {
+  margin-right: 10px; /* Espaçamento entre o ícone e o título */
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(148, 67, 17, 0.8);
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 15px;
+  display: none;
+  pointer-events: none;
+  max-width: 200px;
+}
+
 /* Estilos para o elemento .conteudo-rolavel */
 .conteudo-rolavel {
   overflow: auto;
@@ -30,17 +61,20 @@ mark {
   height: 6px;
 }
 
+/* NÃO aplique estilos ao trilho, deixando-o com estilo padrão */
 .conteudo-rolavel::-webkit-scrollbar-track,
 .timeline::-webkit-scrollbar-track {
   background: inherit; /* Mantém o estilo padrão */
 }
 
+/* Personaliza o polegar */
 .conteudo-rolavel::-webkit-scrollbar-thumb,
 .timeline::-webkit-scrollbar-thumb {
   background: #6b4226; /* Cor do polegar */
   border-radius: 5px; /* Arredondamento */
 }
 
+/* Polegar ao passar o mouse */
 .conteudo-rolavel::-webkit-scrollbar-thumb:hover,
 .timeline::-webkit-scrollbar-thumb:hover {
   background: #a05b37;
@@ -104,10 +138,9 @@ mark {
   border-bottom: 2px solid transparent;
   transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
 }
-
 /* Efeito ao passar o mouse */
 .navbar a:hover::after {
-  width: 100%;
+  width: 100%; /* O traço aparece gradualmente ao passar o mouse */
   opacity: 1;
 }
 
@@ -138,7 +171,7 @@ mark {
   gap: 10px;
   transition: left 0.3s ease-in-out;
   display: none;
-  z-index: 1001;
+  z-index: 1001; /* Colocar o menu por cima da barra de navegação */
 }
 
 .menu-content a {
@@ -253,7 +286,7 @@ a:hover {
 .mitologia,
 .tempo {
   display: flex;
-  align-items: center;
+  align-items: center; /* Alinha a imagem e o título verticalmente */
   gap: 10px;
   margin: 12px;
   border-bottom: 4px solid #6b4226;
@@ -274,15 +307,10 @@ a:hover {
 }
 
 .item img {
-  vertical-align: middle;
+  vertical-align: middle; /* Alinha verticalmente a imagem */
 }
 
-.mapa svg {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
+/* Caixa de informações */
 #info-box {
   width: 300px;
   margin: 0 auto;
@@ -308,7 +336,7 @@ a:hover {
 }
 
 /* Estilos para as imagens dentro do container flex */
-html .mitologia-grega .content img,
+html .mitologia-grega .content img, /* Seletor específico */
 html .mitologia-romana .content img {
   /* Seletor específico */
   max-width: 100%;
@@ -322,94 +350,11 @@ html .mitologia-romana .content img {
 .mitologia-grega.content {
   padding: 18px;
   overflow-y: auto;
-  height: auto;
+  height: auto; /* Permitir que a altura seja auto */
 }
 
 .mitologia-grega h4 {
   padding: 5px;
-}
-
-.str3 {
-  stroke: black;
-  stroke-width: 10;
-  stroke-opacity: 0.501961;
-}
-.str5 {
-  stroke: black;
-  stroke-width: 50;
-}
-.str2 {
-  stroke: #003399;
-  stroke-width: 20;
-}
-.str7 {
-  stroke: #434242;
-  stroke-width: 10;
-}
-.str0 {
-  stroke: black;
-  stroke-width: 10;
-}
-.str4 {
-  stroke: black;
-  stroke-width: 10;
-}
-.str1 {
-  stroke: #003399;
-  stroke-width: 10;
-}
-.str8 {
-  stroke: #2b2a29;
-  stroke-width: 7.62;
-}
-.str6 {
-  stroke: black;
-  stroke-width: 7.62;
-}
-.fil4 {
-  fill: none;
-}
-.fil3 {
-  fill: none;
-  fill-rule: nonzero;
-}
-.fil1 {
-  fill: #fefefe;
-}
-.fil11 {
-  fill: #d9dada;
-}
-.fil0 {
-  fill: #2b2a29;
-}
-.fil2 {
-  fill: #fefefe;
-  fill-rule: nonzero;
-}
-.fil9 {
-  fill: #d9dada;
-  fill-rule: nonzero;
-}
-.fil10 {
-  fill: #434242;
-  fill-rule: nonzero;
-}
-.fil6 {
-  fill: #2b2a29;
-  fill-rule: nonzero;
-}
-.fil8 {
-  fill: black;
-  fill-rule: nonzero;
-}
-.fil7 {
-  fill: #fefefe;
-  fill-rule: nonzero;
-  fill-opacity: 0.501961;
-}
-.fil5 {
-  fill: #fefefe;
-  fill-opacity: 0.701961;
 }
 
 footer {
@@ -428,29 +373,27 @@ footer {
   h1 {
     font-size: 36px;
   }
-  html .mitologia-romana .content img,
+  html .mitologia-romana .content img,  /* Corrigido o seletor */
   html .mitologia-grega .content img {
-    flex-basis: 40%;
+    /* Corrigido o seletor */
+    flex-basis: 40%; /* Ajustamos o flex-basis para telas médias */
   }
   .mitologia-romana,
   .mitologia-grega.content {
+    /* max-height: 60vh; */ /* Removido */
     height: auto;
-  }
-
-  .mapa svg {
-    height: 300px;
   }
 
   .timeline {
     flex-direction: column;
   }
   .navbar-links {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    top: 50px;
-    right: 20px;
+    display: none; /* Esconde os links inicialmente */
+    flex-direction: column; /* Links aparecem empilhados */
+    background-color: white; /* Fundo para o menu dropdown */
+    position: absolute; /* Para que o menu apareça como um dropdown */
+    top: 50px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
     padding: 10px;
     border-radius: 5px;
   }
@@ -460,7 +403,7 @@ footer {
   }
 
   .navbar a {
-    display: block; /* Exibe os links da navbar em telas grandes */
+    display: block;
   }
   .menu-content {
     display: none;
@@ -479,7 +422,7 @@ footer {
 }
 @media screen and (min-width: 769px) {
   .navbar a {
-    display: block; /* Exibe os links da navbar em telas grandes */
+    display: block;
   }
   .menu-content {
     display: none;
