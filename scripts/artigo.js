@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Aguarda o site carregar antes de executar o código
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript carregado com sucesso!");
@@ -24,3 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+=======
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.querySelector(".menu-icon");
+  const body = document.querySelector("body"); // ou o elemento que envolve o menu
+  const menuContent = document.querySelector(".menu-content");
+  menuIcon.addEventListener("click", function () {
+    body.classList.toggle("menu-active");
+  });
+});
+>>>>>>> 56a3cfc6453ccdce67fc4101eef24bcc3d0fdc7b
