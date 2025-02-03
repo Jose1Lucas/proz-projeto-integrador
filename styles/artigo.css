@@ -1,187 +1,189 @@
  /*Reset Basico*/
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-/*Configurações Gerais*/
-
-body {
-font-family: "Gentium Book Plus", serif;
-font-size: 20px;
-height: 100%;
-margin: 0;
-padding: 0;
- background-color: #f4eae6;
-overflow-x: hidden;
-}
-.banner {
- width: 100%;
-height: auto;
-margin-top: 75px;
-display: flex;
-justify-content: center;
-align-items: center;
-background-size: cover;
-background-position: center;
-}
-    
-.banner img {
-width: 100%;
-height: auto;
-object-fit: cover;
-}
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  /*Configurações Gerais*/
   
-@media screen and (max-width: 768px) {
-.banner img {
-height: 200px;
-}
-.navbar a {
-padding: 10px;
-}
-footer {
-padding: 10px;
-}
-}
-.navbar {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-display: flex;
-Flex-wrap: wrap;
-align-items: center;
-justify-content: left;
-padding: 10px 20px;
-background-color: #6b4226;
-z-index: 1000;
-transition: background-color 0.3s ease-in-out;
-}
-.navbar img {
-height: 40px;
-margin-right: 20px;
-padding-left: 10px;
-}
- 
-.navbar a {
-float left;
-display: block;
-color: white;
-text-align: center;
-padding: 14px 20px;
-text-decoration: none;
-}
-.navbar a:hover {
-content: "";
-display: block;
-width: 50%;
-margin: 0 auto;
-border-bottom: 2px solid transparent;
-transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
-}
- 
-/* Efeito ao passar o mouse */
-.navbar a:hover::after {
-width: 100%;
-opacity: 1;
-}
+  body {
+  font-family: "Gentium Book Plus", serif;
+  font-size: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+   background-color: #f4eae6;
+  overflow-x: hidden;
+  }
+  .banner {
+   width: 100%;
+  height: auto;
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  }
+      
+  .banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  }
+    
+  @media screen and (max-width: 768px) {
+  .banner img {
+  height: 200px;
+  }
+  .navbar a {
+  padding: 10px;
+  }
+  footer {
+  padding: 10px;
+  }
+  }
+  .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  Flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  padding: 10px 20px;
+  background-color: #6b4226;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+  }
+  .navbar img {
+  height: 40px;
+  margin-right: 20px;
+  padding-left: 10px;
+  }
+   
+  .navbar a {
+  float left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  }
+  .navbar a:hover {
+  content: "";
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 2px solid transparent;
+  transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
+  }
+   
+  /* Efeito ao passar o mouse */
+  .navbar a:hover::after {
+  width: 100%;
+  opacity: 1;
+  }
+    
+  .navbar-links {
+  display: flex;
+  gap: 15px;
+  }
+      
+  .menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
+  }
+  .menu-content {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Esconde o menu fora da tela inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #6b4226;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: left 0.3s ease-in-out;
+  display: none;
+  }
+      
+  .menu-content a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  }
   
-.navbar-links {
-display: flex;
-gap: 15px;
-}
-    
-.menu-icon {
-display: none;
-font-size: 24px;
-cursor: pointer;
-margin-left: auto;
-padding: 10px;
-}
-.menu-content {
-position: fixed;
-top: 0;
-left: -250px; /* Esconde o menu fora da tela inicialmente */
-width: 250px;
-height: 100%;
-background-color: #6b4226;
-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-padding: 20px;
-display: flex;
-flex-direction: column;
-gap: 10px;
-transition: left 0.3s ease-in-out;
-display: none;
-}
-    
-.menu-content a {
-text-decoration: none;
-font-size: 18px;
-color: white;
-padding: 10px;
-border-radius: 4px;
-}
-
-.menu-content a:hover {
-background-color: #6b4226;
-}
-
-/* Classe para ativar o menu */
-.menu-active .menu-content {
-left: 0; /* Faz o menu deslizar para dentro da tela */
-display: flex;
-}
-
-@media screen and (max-width: 768px) {
-.navbar a {
-display: block; /*Esconde os links */
-}
-.navbar img {
-margin-right: auto; /*Centraliza o logo */
-}
-.menu-icon {
-display: block;
-cursor: pointer;
-padding: 10px;
-}
-.menu-content {
-display: none;
-}
-.menu-active .menu-content a {
-display: block; /* Mostra os links quando o menu está ativo */
-text-align: center;
-padding: 10px;
-color: white;
-background-color: #6b4226;
-border-bottom: 2px solid transparent;
-transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
-}
-.navbar-links {
-display: none;
-flex-direction: column;
-background-color: white;
-position: absolute;
-top: 50px;
-right: 20px;
-padding: 10px;
-border-radius: 5px;
-}
-}
-
+  .menu-content a:hover {
+  background-color: #6b4226;
+  }
+  
+  /* Classe para ativar o menu */
+  .menu-active .menu-content {
+  left: 0; /* Faz o menu deslizar para dentro da tela */
+  display: flex;
+  }
+  
+  @media screen and (max-width: 768px) {
+  .navbar a {
+  display: block; /*Esconde os links */
+  }
+  .navbar img {
+  margin-right: auto; /*Centraliza o logo */
+  }
+  .menu-icon {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  }
+  .menu-content {
+  display: none;
+  }
+  .menu-active .menu-content a {
+  display: block; /* Mostra os links quando o menu está ativo */
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: #6b4226;
+  border-bottom: 2px solid transparent;
+  transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
+  }
+  .navbar-links {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  }
+  }
+  
 /* Estilização do título do artigo */
 #artigo {
 text-align: center;
-margin: 40px 0;
+margin: 0px 0;
+padding: 0px;
+border-radius: 0px;
 }
 
 #artigo h1 {
-font-size: 28px;
-color: #2c3e50;
+font-size: 30px;
+color: #a05b37;
 }
 
 #artigo p {
 font-size: 18px;
-color: #555;
+color: #0a0a0a;
 }
 
 .container {
@@ -213,7 +215,7 @@ border-radius: 8px;
 
 .grecia-antiga h3, .deuses-deusas h3, .bandeira h3, .olimpiadas h3, .cultura h3, .grecia-moderna h3 {
 font-size: 24px;
-color: #2c3e50;
+color: #a05b37;
 margin-bottom: 15px;
 }
 
@@ -226,7 +228,7 @@ margin-bottom: 10px;
 
 .grecia-antiga p, .deuses-deusas p, .bandeira p, .olimpiadas p, .cultura p, .grecia-moderna p{
 font-size: 16px;
- color: #555;
+ color: #0a0a0a;
 text-align: justify;
   margin-bottom: 15px;
 }
