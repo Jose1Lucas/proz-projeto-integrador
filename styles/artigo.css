@@ -58,6 +58,7 @@ body {
   z-index: 1000;
   transition: background-color 0.3s ease-in-out;
 }
+
 .navbar img {
   height: 40px;
   margin-right: 20px;
@@ -65,26 +66,32 @@ body {
 }
 
 .navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
+  position: relative;
   text-decoration: none;
-}
-.navbar a:hover {
-  content: "";
-  display: block;
-  width: 50%;
-  margin: 0 auto;
-  border-bottom: 2px solid transparent;
-  transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
+  color: white;
+  padding: 14px 20px;
 }
 
-/* Efeito ao passar o mouse */
+.navbar a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%; /* Começa no centro */
+  bottom: 0;
+  width: 0; /* Começa com largura 0 */
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Transição aqui */
+}
+
 .navbar a:hover::after {
-  width: 100%;
+  width: 100%; /* Expande a largura para 100% */
+  left: 0; /* Alinha o traço à esquerda */
   opacity: 1;
+}
+
+.hide-after::after {
+  display: none !important;
 }
 
 .navbar-links {
@@ -112,7 +119,9 @@ body {
   flex-direction: column;
   gap: 10px;
   transition: left 0.3s ease-in-out;
-  display: none;
+  /* display: none; */
+  display: flex;
+  z-index: 1001; /* Colocar o menu por cima da barra de navegação */
 }
 
 .menu-content a {
@@ -128,14 +137,13 @@ body {
 }
 
 /* Classe para ativar o menu */
-.menu-active .menu-content {
+.navbar.menu-active .menu-content {
   left: 0; /* Faz o menu deslizar para dentro da tela */
   display: flex;
 }
-
 @media screen and (max-width: 768px) {
   .navbar a {
-    display: block; /*Esconde os links */
+    display: none; /*Esconde os links */
   }
   .navbar img {
     margin-right: auto; /*Centraliza o logo */
@@ -145,10 +153,10 @@ body {
     cursor: pointer;
     padding: 10px;
   }
-  .menu-content {
+  .navbar-links {
     display: none;
   }
-  .menu-active .menu-content a {
+  .navbar.menu-active .menu-content a {
     display: block; /* Mostra os links quando o menu está ativo */
     text-align: center;
     padding: 10px;
@@ -156,16 +164,6 @@ body {
     background-color: #6b4226;
     border-bottom: 2px solid transparent;
     transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
-  }
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 5px;
   }
 }
 

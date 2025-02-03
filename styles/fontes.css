@@ -186,9 +186,10 @@ mark {
   background-color: #6b4226;
 }
 
-/* Classe para ativar o menu */
+/* Classe para ativar o menu  */
+
 .menu-content.menu-active {
-  left: 0; /* Faz o menu deslizar para dentro da tela */
+  left: 0;
   display: flex;
 }
 
