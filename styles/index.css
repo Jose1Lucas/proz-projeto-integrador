@@ -1,189 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bacasime+Antique&family=Forum&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Martian+Mono:wght@100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap");
+
 /*Reset Basico*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*Configurações Gerais*/
 body {
-    font-family: "Gentium Book Plus", serif;
-    font-size: 20px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #f4eae6;
-    overflow-x: hidden;
+  font-family: "Gentium Book Plus", serif;
+  font-size: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f4eae6;
+  overflow-x: hidden;
 }
 .banner {
-    width: 100%;
-    height: auto; 
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: auto;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .banner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-@media  screen and (max-width: 768px) {
-    .banner img{
-        height: 200px;
-    }
-    .navbar a {
-        padding: 10px;
-    }
-    footer {
-        padding: 10px;
-    }
-    
+@media screen and (max-width: 768px) {
+  .banner img {
+    height: 200px;
+  }
+  .navbar a {
+    padding: 10px;
+  }
+  footer {
+    padding: 10px;
+  }
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: left;
-    padding: 10px 20px;
-    background-color: #6B4226;
-    z-index: 1000;
-    transition: background-color 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  padding: 10px 20px;
+  background-color: #6b4226;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .navbar img {
-    height: 40px;
-    margin-right: 20px;
-    padding-left: 10px;
+  height: 40px;
+  margin-right: 20px;
+  padding-left: 10px;
 }
 
 .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
 }
 
 .navbar a:hover {
-    content: "";
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    border-bottom: 2px solid transparent;
-    transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
+  content: "";
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 2px solid transparent;
+  transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
 }
 .navbar-links {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin-left: auto;
-    padding: 10px;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
 }
 
 .menu-content {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Esconde o menu fora da tela inicialmente */
-    width: 250px;
-    height: 100%;
-    background-color: #6b4226;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    transition: left 0.3s ease-in-out;
-    display: none;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Esconde o menu fora da tela inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #6b4226;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: left 0.3s ease-in-out;
+  display: none;
 }
 
 .menu-content a {
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    padding: 10px;
-    border-radius: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 .menu-content a:hover {
-    background-color: #6B4226;
+  background-color: #6b4226;
 }
 
 /* Classe para ativar o menu */
 .menu-active .menu-content {
-    left: 0; /* Faz o menu deslizar para dentro da tela */
-    display: flex;
+  left: 0; /* Faz o menu deslizar para dentro da tela */
+  display: flex;
 }
-
 
 @media screen and (max-width: 768px) {
-    .navbar-links {
-        display: none; /*Esconde os links */
-    }
-    .navbar img {
-        margin-right: auto; /*Centraliza o logo */
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-        padding: 10px;
-    }
-    .menu-active .menu-content a {
-        display: block; /* Mostra os links quando o menu está ativo */
-        text-align: center;
-        padding: 10px;
-        color: white;
-        background-color: #6B4226;
-        border-bottom: 2px solid transparent;
-        transition: border-color 2.0s ease-in-out, width 0.6s ease-in-out;
-    }
-
+  .navbar-links {
+    display: none; /*Esconde os links */
+  }
+  .navbar img {
+    margin-right: auto; /*Centraliza o logo */
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .menu-active .menu-content a {
+    display: block; /* Mostra os links quando o menu está ativo */
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #6b4226;
+    border-bottom: 2px solid transparent;
+    transition: border-color 2s ease-in-out, width 0.6s ease-in-out;
+  }
 }
 .content {
-    margin-top: 60px;
-    padding: 20px;
+  margin-top: 60px;
+  padding: 20px;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
 }
 
 .highlight {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 footer {
-    background-color: #6B4226;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #6b4226;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 footer a {
-    color: #4caf50;
-    text-decoration: none;
+  color: #4caf50;
+  text-decoration: none;
 }
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
