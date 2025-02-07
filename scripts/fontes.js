@@ -33,6 +33,32 @@ function mostrarInformacoes(tipo) {
   }
 }
 
+const mapContainer = document.querySelector(".map-mediterranean-container");
+const zoomInButton = document.querySelector(
+  ".zoom-controls button:nth-child(1)"
+);
+const zoomOutButton = document.querySelector(
+  ".zoom-controls button:nth-child(2)"
+);
+
+let scale = 1;
+
+const applyZoom = () => {
+  mapContainer.style.transform = `scale(${scale})`;
+  mapContainer.style.transformOrigin = "center center";
+};
+
+zoomInButton.addEventListener("click", () => {
+  scale += 0.1;
+  applyZoom();
+});
+
+zoomOutButton.addEventListener("click", () => {
+  scale -= 0.1;
+  if (scale < 0.1) scale = 0.1;
+  applyZoom();
+});
+
 const locais = [
   {
     nome: "Atenas",
@@ -408,7 +434,6 @@ document.addEventListener("DOMContentLoaded", () => {
       svg.setAttribute("id", "mapa-svg");
 
       locais.forEach((local) => {
-        // Criar um novo círculo
         const circle = document.createElementNS(
           "http://www.w3.org/2000/svg",
           "circle"
