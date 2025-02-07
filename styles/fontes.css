@@ -20,6 +20,7 @@ mark {
 
 .map-mediterranean-container {
   display: flex;
+  position: relative;
   margin-bottom: 30px;
   align-items: center;
   justify-content: center;
@@ -34,7 +35,7 @@ mark {
 }
 
 .map-container .item {
-  margin-right: 10px; /* Espaçamento entre o ícone e o título */
+  margin-right: 10px;
 }
 
 .tooltip {
@@ -49,6 +50,34 @@ mark {
   max-width: 200px;
 }
 
+/* Botões do mapa */
+.zoom-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  z-index: 10;
+}
+
+.zoom-controls button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background: lightgray;
+  transition: 0.2s;
+}
+
+.zoom-controls button:hover {
+  background: gray;
+  color: black;
+}
+
 /* Estilos para o elemento .conteudo-rolavel */
 .conteudo-rolavel {
   overflow: auto;
@@ -61,17 +90,16 @@ mark {
   height: 6px;
 }
 
-/* NÃO aplique estilos ao trilho, deixando-o com estilo padrão */
 .conteudo-rolavel::-webkit-scrollbar-track,
 .timeline::-webkit-scrollbar-track {
-  background: inherit; /* Mantém o estilo padrão */
+  background: inherit;
 }
 
 /* Personaliza o polegar */
 .conteudo-rolavel::-webkit-scrollbar-thumb,
 .timeline::-webkit-scrollbar-thumb {
-  background: #6b4226; /* Cor do polegar */
-  border-radius: 5px; /* Arredondamento */
+  background: #6b4226;
+  border-radius: 5px;
 }
 
 /* Polegar ao passar o mouse */
@@ -140,7 +168,7 @@ mark {
 }
 /* Efeito ao passar o mouse */
 .navbar a:hover::after {
-  width: 100%; /* O traço aparece gradualmente ao passar o mouse */
+  width: 100%;
   opacity: 1;
 }
 
@@ -171,7 +199,7 @@ mark {
   gap: 10px;
   transition: left 0.3s ease-in-out;
   display: none;
-  z-index: 1001; /* Colocar o menu por cima da barra de navegação */
+  z-index: 1001;
 }
 
 .menu-content a {
@@ -186,8 +214,7 @@ mark {
   background-color: #6b4226;
 }
 
-/* Classe para ativar o menu  */
-
+/* Classe para ativar o menu */
 .menu-content.menu-active {
   left: 0;
   display: flex;
@@ -217,7 +244,7 @@ mark {
 /* Cada container da linha do tempo */
 .container {
   position: relative;
-  overflow-x: auto; /* Permite rolar horizontalmente */
+  overflow-x: auto;
   scroll-behavior: smooth;
   font-size: 20px;
   min-width: 250px;
@@ -287,7 +314,7 @@ a:hover {
 .mitologia,
 .tempo {
   display: flex;
-  align-items: center; /* Alinha a imagem e o título verticalmente */
+  align-items: center;
   gap: 10px;
   margin: 12px;
   border-bottom: 4px solid #6b4226;
@@ -308,7 +335,7 @@ a:hover {
 }
 
 .item img {
-  vertical-align: middle; /* Alinha verticalmente a imagem */
+  vertical-align: middle;
 }
 
 /* Caixa de informações */
@@ -337,9 +364,8 @@ a:hover {
 }
 
 /* Estilos para as imagens dentro do container flex */
-html .mitologia-grega .content img, /* Seletor específico */
+html .mitologia-grega .content img,
 html .mitologia-romana .content img {
-  /* Seletor específico */
   max-width: 100%;
   height: auto;
   max-height: 150px;
@@ -351,7 +377,7 @@ html .mitologia-romana .content img {
 .mitologia-grega.content {
   padding: 18px;
   overflow-y: auto;
-  height: auto; /* Permitir que a altura seja auto */
+  height: auto;
 }
 
 .mitologia-grega h4 {
@@ -374,14 +400,12 @@ footer {
   h1 {
     font-size: 36px;
   }
-  html .mitologia-romana .content img,  /* Corrigido o seletor */
+  html .mitologia-romana .content img,
   html .mitologia-grega .content img {
-    /* Corrigido o seletor */
-    flex-basis: 40%; /* Ajustamos o flex-basis para telas médias */
+    flex-basis: 40%;
   }
   .mitologia-romana,
   .mitologia-grega.content {
-    /* max-height: 60vh; */ /* Removido */
     height: auto;
   }
 
@@ -389,12 +413,12 @@ footer {
     flex-direction: column;
   }
   .navbar-links {
-    display: none; /* Esconde os links inicialmente */
-    flex-direction: column; /* Links aparecem empilhados */
-    background-color: white; /* Fundo para o menu dropdown */
-    position: absolute; /* Para que o menu apareça como um dropdown */
-    top: 50px; /* Ajuste conforme necessário */
-    right: 20px; /* Ajuste conforme necessário */
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    right: 20px;
     padding: 10px;
     border-radius: 5px;
   }
