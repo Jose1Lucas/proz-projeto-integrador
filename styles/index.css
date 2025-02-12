@@ -17,6 +17,7 @@ body {
   background-color: #f4eae6;
   overflow-x: hidden;
 }
+
 .banner {
   width: 100%;
   height: auto;
@@ -38,9 +39,11 @@ body {
   .banner img {
     height: 200px;
   }
+
   .navbar a {
     padding: 10px;
   }
+
   footer {
     padding: 10px;
   }
@@ -87,17 +90,22 @@ body {
   content: "";
   display: block;
   position: absolute;
-  left: 50%; /* Começa no centro */
+  left: 50%;
+  /* Começa no centro */
   bottom: 0;
-  width: 0; /* Começa com largura 0 */
+  width: 0;
+  /* Começa com largura 0 */
   height: 2px;
   background-color: white;
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Transição aqui */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  /* Transição aqui */
 }
 
 .navbar a:hover::after {
-  width: 100%; /* Expande a largura para 100% */
-  left: 0; /* Alinha o traço à esquerda */
+  width: 100%;
+  /* Expande a largura para 100% */
+  left: 0;
+  /* Alinha o traço à esquerda */
   opacity: 1;
 }
 
@@ -108,20 +116,6 @@ body {
 .navbar-links {
   display: flex;
   gap: 15px;
-}
-@keyframes glow-ring {
-  0% {
-    border: 1px solid rgba(255, 215, 0, 0.6);
-    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.4);
-  }
-  50% {
-    border: 1px solid rgba(255, 215, 0, 1);
-    box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.8);
-  }
-  100% {
-    border: 1px solid rgba(255, 215, 0, 0.6);
-    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.4);
-  }
 }
 
 .navbar {
@@ -140,7 +134,8 @@ body {
 .menu-content {
   position: fixed;
   top: 0;
-  left: -250px; /* Esconde o menu fora da tela inicialmente */
+  left: -250px;
+  /* Esconde o menu fora da tela inicialmente */
   width: 250px;
   height: 100%;
   background-color: #6b4226;
@@ -167,24 +162,31 @@ body {
 
 /* Classe para ativar o menu */
 .menu-active .menu-content {
-  left: 0; /* Faz o menu deslizar para dentro da tela */
+  left: 0;
+  /* Faz o menu deslizar para dentro da tela */
   display: flex;
 }
 
 @media screen and (max-width: 768px) {
   .navbar-links {
-    display: none; /*Esconde os links */
+    display: none;
+    /*Esconde os links */
   }
+
   .navbar img {
-    margin-right: auto; /*Centraliza o logo */
+    margin-right: auto;
+    /*Centraliza o logo */
   }
+
   .menu-icon {
     display: block;
     cursor: pointer;
     padding: 10px;
   }
+
   .menu-active .menu-content a {
-    display: block; /* Mostra os links quando o menu está ativo */
+    display: block;
+    /* Mostra os links quando o menu está ativo */
     text-align: center;
     padding: 10px;
     color: white;
@@ -220,10 +222,12 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 footer a {
   color: #4caf50;
   text-decoration: none;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
