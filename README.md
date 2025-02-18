@@ -21,6 +21,15 @@ Aqui, a história não é só uma sequência de datas ou batalhas épicas; é um
 Então, entre sem cerimônia e fique à vontade – afinal, nossos anfitriões, como Zeus e Júpiter, já estão acostumados a uma boa dose de atenção (e talvez até esperem um sacrifício ou dois, mas a gente não precisa entrar nesse detalhe...).
 </p>
 
+<h2 align="center">🎥 Vídeo de Apresentação do Projeto</h2>
+
+<p align="center">
+  <a href="https://youtu.be/EQEF9MhZ40A?si=H-rgY0UHOAshpkUn">
+    <img src="https://img.youtube.com/vi/EQEF9MhZ40A/hqdefault.jpg" alt="Apresentação do Projeto">
+  </a>
+</p>
+
+
 <div align="center">
   <h2>👥 Equipe do Projeto</h2>
 
@@ -32,3 +41,7 @@ Então, entre sem cerimônia e fique à vontade – afinal, nossos anfitriões, 
 | 👩‍💻 Lara Vitória da Costa Bezerra | [GitHub](https://github.com/larav1)  <br> [LinkedIn](https://www.linkedin.com/in/laravitoria1) |
 | 👨‍💻 Andréia | [GitHub](https://github.com/Andreia-Zefirino)  <br> [LinkedIn](http://www.linkedin.com/in/andreiazeferino) |
 </div>
+
+
+
+
