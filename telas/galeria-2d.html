@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria 2D</title>
+
+    <script src="../scripts/galeria-responsivo.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <link rel="stylesheet" href="../styles/galeria-2d.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Benne&family=Cinzel:wght@400..900&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <img src="../img/IMG-LOGO2.jpg" alt="Logo">
+        <div class="menu-icon">☰</div>
+        <div class="menu-content">
+            <!-- Este menu é o hambúrguer e só aparece no mobile -->
+            <a href="../index.html" class="active">Início</a>
+            <a href="./artigo.html">Artigos</a>
+            <a href="./galeria-categorias.html">Galeria</a>
+            <a href="./fontes.html">Fontes</a>
+            <a href="./contato.html">Contatos</a>
+        </div>
+        <!-- Estes links devem estar visíveis em telas maiores -->
+        <div class="navbar-links">
+            <a href="../index.html" class="active">Início</a>
+            <a href="./artigo.html">Artigos</a>
+            <a href="./galeria-categorias.html">Galeria</a>
+            <a href="./fontes.html">Fontes</a>
+            <a href="./contato.html">Contatos</a>
+        </div>
+    </nav>
+
+    <div id="titulo-conteudo">
+        <h1>GALERIA 2D</h1>
+    </div>
+
+    <div class="separador"></div>
+
+    <!-- Páginas de conteúdo -->
+    <section class="container-de-conteudo">
+
+
+        <div class="pagina">
+
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg" data-caption="Coliseu em Roma, Itália.">
+                <img class="example-image" src="https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg" alt="image-1" />
+            </a>
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/7245255/pexels-photo-7245255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-caption="Rio Tibre à noite em Roma, Itália.">
+                <img class="example-image" src="https://images.pexels.com/photos/7245255/pexels-photo-7245255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image-2" />
+            </a>
+             
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/159862/art-school-of-athens-raphael-italian-painter-fresco-159862.jpeg" data-caption="Escola de Athenas, Pintura clássica.">
+                <img class="example-image" src="https://images.pexels.com/photos/159862/art-school-of-athens-raphael-italian-painter-fresco-159862.jpeg" alt="image-3" />
+            </a>
+      
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/13538484/pexels-photo-13538484.jpeg" data-caption="Desfiladeiro em Gaios, Grécia.">
+                <img class="example-image" src="https://images.pexels.com/photos/13538484/pexels-photo-13538484.jpeg" alt="image-4" />
+            </a>
+
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg" data-caption="Casas a beira do corpo D'água Santorini, Grécia.">
+                <img class="example-image" src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg" alt="image-5" />
+            </a>
+            
+               
+            <a data-fancybox="gallery" href="https://images.unsplash.com/photo-1621965466808-267b85b2bef0?q=80&w=799&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-caption="Teatro Antigo de Taormina, Grécia.">
+                <img class="example-image" src="https://images.unsplash.com/photo-1621965466808-267b85b2bef0?q=80&w=799&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image-6" />
+            </a>
+          
+            <a data-fancybox="gallery" href="https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D%20870w,%20" data-caption="Ruinas do templo pagão Parthenon, Grécia.">
+                <img class="example-image" src="https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D%20870w,%20" alt="image-7" />
+            </a>
+            
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/30515301/pexels-photo-30515301/free-photo-of-por-do-sol-dourado-sobre-a-paisagem-grega.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-caption="Por do sol dourado sobre a paisagem grega.">
+                <img class="example-image" src="https://images.pexels.com/photos/30515301/pexels-photo-30515301/free-photo-of-por-do-sol-dourado-sobre-a-paisagem-grega.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image-8" />
+            </a>
+            
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/1618898/pexels-photo-1618898.jpeg" data-caption="Pão e prato de comida mediterrânea.">
+                <img class="example-image" src="https://images.pexels.com/photos/1618898/pexels-photo-1618898.jpeg" alt="image-9" />
+            </a>
+            
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/6422076/pexels-photo-6422076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-caption="Ruinas antigas em Fethiye Turquia.">
+                <img class="example-image" src="https://images.pexels.com/photos/6422076/pexels-photo-6422076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image-10" />
+            </a>
+        
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/8659662/pexels-photo-8659662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-caption="Mulher tocando uma arpa antigo e clássico instrumento.">
+                <img class="example-image" src="https://images.pexels.com/photos/8659662/pexels-photo-8659662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image-11" />
+            </a>
+            
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/4973613/pexels-photo-4973613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-caption="Gato em antigas ruínas no mediterrâneo.">
+                <img class="example-image" src="https://images.pexels.com/photos/4973613/pexels-photo-4973613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image-12" />
+            </a>
+            
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/8985428/pexels-photo-8985428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-caption="Paisagem do horizonte, mediterrâneo oriental.">
+                <img class="example-image" src="https://images.pexels.com/photos/8985428/pexels-photo-8985428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image-13" />
+            </a>
+        
+            <a data-fancybox="gallery" href="https://d1inegp6v2yuxm.cloudfront.net/royal-academy/image/upload/c_limit,cs_tinysrgb,dn_72,f_auto,fl_progressive.keep_iptc,w_2400/lskcc8jrhlzxgaxlh6im.jpeg" data-caption="Prancha 30: Soldados romanos se preparam para a quarta batalha contra os dácios. Gravura da Coluna de Trajano por Pietro Santi Bartoli, publicada por Giacomo de Rossi (Roma, 1672).">
+                <img class="example-image" src="https://d1inegp6v2yuxm.cloudfront.net/royal-academy/image/upload/c_limit,cs_tinysrgb,dn_72,f_auto,fl_progressive.keep_iptc,w_2400/lskcc8jrhlzxgaxlh6im.jpeg" alt="image-14" />
+            </a>
+            
+            <a data-fancybox="gallery" href="https://images.pexels.com/photos/19282915/pexels-photo-19282915/free-photo-of-estatua-de-nero-em-anzio-italia.jpeg" data-caption="Estátua em bronze do imperador Nero, Anzio Itália.">
+                <img class="example-image" src="https://images.pexels.com/photos/19282915/pexels-photo-19282915/free-photo-of-estatua-de-nero-em-anzio-italia.jpeg" alt="image-15" />
+            </a>
+            
+    </div>
+
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; Todos os direitos reservados ao grupo 3 - Everson, Andréia, José Lucas, Lara Vitória, Raylany</p>
+    </footer>
+
+</body>
+
+</html>

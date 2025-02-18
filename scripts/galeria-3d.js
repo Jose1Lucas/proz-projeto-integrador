@@ -1,4 +1,4 @@
- // Página indicador da página inicial
+ // Indicador da página inicial
 let numIndicador = 1;
 
 // Captura dos botões de navegação

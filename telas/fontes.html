@@ -4,11 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="../styles/fontes.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../scripts/fontes.js" defer></script>
   </head>
   <body>
@@ -59,7 +54,6 @@
             transformando sociedades humanas em complexas
             <mark>estruturas organizadas</mark>.
           </p>
-          <!--<img src="../img/idade-da-pedra.png" alt="Período Neolítico" />-->
           <img src="../img/neolítico2.png" alt="Período Neolítico" />
         </div>
       </div>
@@ -96,7 +90,6 @@
             >, ocorreram os primeiros <mark>Jogos Olímpicos</mark>.
           </p>
           <img src="../img/cerâmica-if.png" alt="Cerâmica - Idade do Ferro" />
-          <!-- <img src="../img/idade-do-ferro.jpg" alt="Idade do Ferro" /> -->
         </div>
       </div>
       <div class="container">
@@ -116,7 +109,6 @@
             >).
           </p>
           <img src="../img/ilíada.png" alt="Período Arcaico - Ilíada" />
-          <!-- <img src="../img/Arcaico.jpg" alt="Idade do Ferro" /> -->
         </div>
       </div>
       <div class="container">
@@ -133,7 +125,6 @@
             drama floresceu com Ésquilo, Sófocles e Eurípides.
           </p>
           <img src="../img/Clássico-p1.jpg" alt="Guerras Persas" />
-          <!-- <img src="../img/Clássico-p2.jpg" alt="Guerra do Peloponeso" /> -->
         </div>
       </div>
       <div class="container">
@@ -149,7 +140,6 @@
             Macedônia como líder na Grécia, e, em 323, ocorreu a morte de
             <mark>Alexandre, o Grande</mark>.
           </p>
-          <!-- <img src="../img/Clássico-p4.jpg" alt="Período Clássico" /> -->
           <img src="../img/Clássico-p3.jpg" alt="Alexandre, o Grande" />
         </div>
       </div>
@@ -183,7 +173,6 @@
             >, tornou a Grécia uma <mark>província</mark> em 146 a.C. e
             conquistou o Egito em 30 a.C., encerrando o período.
           </p>
-          <!-- <img src="../img/Helenistico-p3.jpg" alt="Período helenístico" /> -->
           <img src="../img/Helenistico-p4.jpg" alt="Período helenístico" />
         </div>
       </div>
@@ -226,7 +215,6 @@
               ></mark
             >.
           </p>
-          <!-- <img src="../img/Roma-p2.jpg" alt="Roma" /> -->
         </div>
       </div>
       <div class="container">
@@ -241,7 +229,6 @@
             <mark>arte, arquitetura e literatura romanas</mark>. Esse período
             viu a ascensão da classe equestre e o aumento da riqueza.
           </p>
-          <!-- <img src="../img/Roma-p3.jpg" alt="Roma" /> -->
           <img src="../img/Roma-p4.png" alt="Roma" />
         </div>
       </div>
@@ -262,7 +249,6 @@
             Augusto em <mark><strong>30 a.C.</strong></mark
             >, encerrando a república e <mark>iniciando o império</mark>.
           </p>
-          <!-- <img src="../img/Roma-p5.png" alt="Roma" /> -->
         </div>
       </div>
       <div class="container">
@@ -319,7 +305,6 @@
         </div>
       </div>
     </div>
-
     <div class="mapa-container">
       <div class="item">
         <img src="../img/mapa.png" alt="Mapa - ícone" width="40" />
@@ -327,11 +312,12 @@
       <h1>Mapa do Mediterrâneo</h1>
     </div>
     <div class="map-mediterranean-container" id="map-container">
-      <!-- <img src="../img/map.svg" alt="Mapa" width="1123" height="794" /> -->
+      <div class="zoom-controls">
+        <button type="button" onclick="zoomin()">+</button>
+        <button type="button" onclick="zoomout()">-</button>
+      </div>
     </div>
-
     <div id="tooltip" class="tooltip"></div>
-
     <div class="mitologia">
       <div class="item">
         <img src="../img/atena-icone.png" alt="Atena" width="40" />
@@ -359,7 +345,6 @@
       <button class="button" onclick="mostrarInformacoes('romana')">
         Mitologia Romana
       </button>
-
       <!-- Informações da Mitologia Grega -->
       <div
         class="mitologia-grega content conteudo-rolavel"
@@ -572,7 +557,5 @@
         Lara Vitória, Raylany
       </p>
     </footer>
-
-    <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
   </body>
 </html>
