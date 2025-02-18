@@ -24,7 +24,7 @@ Então, entre sem cerimônia e fique à vontade – afinal, nossos anfitriões, 
 <h2 align="center">🎥 Vídeo de Apresentação do Projeto</h2>
 
 <p align="center">
-  <a href="https://youtu.be/EQEF9MhZ40A?si=H-rgY0UHOAshpkUn">
+  <a href="https://youtu.be/EQEF9MhZ40A?si=H-rgY0UHOAshpkUn" target="_blank">
     <img src="https://img.youtube.com/vi/EQEF9MhZ40A/hqdefault.jpg" alt="Apresentação do Projeto">
   </a>
 </p>
